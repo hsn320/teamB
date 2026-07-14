@@ -1,0 +1,236 @@
+
+:root {
+    --bg-beige: #FAF7EF;
+    --bg-brown:#B9885A; /* ハンバーガーメニューやフッターに */
+    --bg-brown:
+    --font-color:#5A5048; /* 黒よりの茶 */
+}
+
+body{
+    background-color: var(--bg-beige);
+}
+
+/* 三本線のスタイル */
+.bar {
+    width: 40px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburger-btn.open .bar:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);  /* 上の線を斜めに */
+}
+
+.hamburger-btn.open .bar:nth-child(2) {
+  opacity: 0;  /* 中央の線を消す */
+}
+
+.hamburger-btn.open .bar:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);  /* 下の線を斜めに */
+}
+
+/* ボタンのスタイル */
+.hamburger-btn {
+    width: 60px;
+    height: 60px;
+    background-color:var(--sub-color);
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 101;  /*ドロワーより前面に */
+}
+
+.drawer {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: var(--main-color);
+    width: 230px; 
+    height: 100dvh;
+}
+
+.drawer-nav-item {
+    border-bottom: 1px solid var(--sub-color);
+    padding: 20px 0;
+    text-align: left;
+    list-style: none;
+}
+
+.drawer-nav-item a {
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+    display: block;
+    
+}
+
+.drawer-nav-item:last-child {
+    border-bottom: none;
+}
+
+.language-toggle {
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    color: #B9885A;
+}
+
+.arrow.open {
+    transform: rotate(180deg);
+}
+
+.language-dropdown {
+    list-style: none;
+    padding: 0;
+    margin-top: 0;
+    max-height: 0;           
+    overflow: hidden;
+    transition: max-height 0.3s ease, margin-top 0.3s ease;
+}
+
+.language-dropdown.open {
+    max-height: 200px;
+    margin-top: 10px;
+}
+
+.language-option {
+    padding: 20px 0;
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.phrase{
+    padding-top: 60px;
+    text-align: center;
+    h2{
+        margin-bottom: 0px;
+        font-size: 24px;
+    }
+    h3{
+        margin-top: 0;
+    }
+}
+.flowWrap {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 20px 40px;
+    img {
+        object-fit: cover;
+    }
+}
+
+/* flowの共通設定 */
+.flow-box {
+    display: flex;
+    align-items: stretch;
+    height: 200px;
+    box-shadow: 0px 5px 5px gainsboro;
+
+    .text-content {
+        flex: 0 0 160px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    img {
+        flex: 1;
+        height: 100%;
+    }
+
+    h4 {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        height: 50px;
+        padding: 0 0 0 20px;
+        color: var(--font-color);
+        background-color: #FFE7C2;
+        font-size: 18px;
+        font-weight: normal;
+    }
+
+    h4 span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        margin: 0 16px 0 -20px;
+        background-color: #9C917A;
+        color: #fff;
+        font-size: 20px;
+        flex-shrink: 0;
+    }
+
+    p {
+        text-align: left;
+        color: var(--font-color);
+        font-size: 13px;
+        line-height: 1.6;
+        padding: 10px 20px;
+        background-color: #D8C4A2;
+        flex: 1;
+        margin: 0;
+    }
+}
+
+/* flow-02（reverse）のレイアウト */
+.flow-box.reverse {
+    flex-direction: row-reverse;
+
+    h4 {
+        flex-direction: row-reverse;
+        padding: 0 20px 0 0;
+    }
+
+    h4 span {
+        margin: 0 -20px 0 16px;
+    }
+
+    p {
+        text-align: right;
+    }
+}
+
+/* flow-04（完成）の個別レイアウト */
+.flow-last {
+    flex-direction: column;
+    height: auto;
+    box-shadow: 0px 5px #333;
+
+    .text-content {
+        flex-direction: row;
+    }
+
+    h4 {
+        height: 60px;
+        font-size: 20px;
+        background-color: #FFE7C2;
+        flex: 1;
+    }
+
+    h4 span {
+        margin: 0 16px 0 -20px;
+    }
+
+    img {
+        height: 180px;
+        width: 100%;
+    }
+}

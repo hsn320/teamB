@@ -4,8 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>友安製作所</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/ress.css">
+    <script defer src="/js/index.js"></script>
 </head>
 <body>
+    <!-- ハンバーガーメニュー -->
+    <section class="hamburgerMenu">
+        <button id="menuBtn" class="hamburger-btn">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        </button>
+        <nav class="drawer" id="drawer">
+            <ul class="drawer-nav-list">
+            <li class="drawer-nav-item language-item">
+                
+                    言語設定 <span class="arrow">ｖ</span>
+                
+                <ul class="language-dropdown">
+                    <li class="language-option">日本語</li>
+                    <span "language-option"></span>
+                    <li class="language-option">繁體中文</li>
+                </ul>
+                </li>
+                <li class="drawer-nav-item"><a href="index.html">TOP</a></li>
+                <li class="drawer-nav-item"><a href="#">タイル</a></li>
+                <li class="drawer-nav-item"><a href="#">タイル診断</a></li>
+                <li class="drawer-nav-item"><a href="#">ピックアップ</a></li>
+                <li class="drawer-nav-item"><a href="#">SNS</a></li>
+            </ul>
+        </nav>
+    </section>
+    
+<!-- タイルの作業フロー -->
+<section class="flowWrap">
+    <div class="phrase">
+        <h2>誰でも簡単！</h2>
+        <h3>切って、めくって、貼るだけ！</h3>
+    </div>
+
+    <div class="flow-box">
+        <div class="text-content">
+            <h4><span>１</span>切る</h4>
+            <p>貼りたい場所を<br>あらかじめ<br>測っておこう！</p>
+        </div>
+        <img src="/image/flow01.webp" alt="タイルを切る">
+    </div>
+
+    <div class="flow-box reverse">
+        <div class="text-content">
+            <h4><span>２</span>めくる</h4>
+            <p>シールなので、<br>接着剤は不要！</p>
+        </div>
+        <img src="/image/flow02.webp" alt="タイルをめくる">
+    </div>
+
+    <div class="flow-box">
+        <div class="text-content">
+            <h4><span>３</span>貼る</h4>
+            <p>テープで仮貼り<br>すると後から楽！</p>
+        </div>
+        <img src="/image/flow03.webp" alt="タイルを貼る">
+    </div>
+
+    <div class="flow-box flow-last">
+        <div class="text-content">
+            <h4><span>４</span>完成！</h4>
+        </div>
+        <img src="/image/flow04.webp" alt="タイルを貼り終えた画像">
+    </div>
+</section>
+
+
+    <h3>こんな場所にも</h3>
+
+    <!-- 診断サイトへ -->
+    <section>
+        <p>colorsのタイルは全18種類！<br>あなたにあったタイルはどれ？</p>
+        <button class="sindanBtn">タイル診断</button>
+    </section>
+
 
 </body>
 </html>
