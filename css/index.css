@@ -129,7 +129,7 @@ li{
 .tileBox{
     width: 100%;
     height: 225px;
-    margin: 20px 0 120px;
+    margin: 20px 0 10px;
     position: relative;
     .lti{
         position: absolute;
@@ -184,7 +184,7 @@ li{
     }
     .link{
         position: absolute;
-        bottom: 190px;
+        bottom: 90px;
         left: 10px;
         width: 85px;
     }
@@ -193,12 +193,43 @@ li{
     animation: leftIn 1s forwards;
 }
 @keyframes slideIn{
-    0%{opacity:0; transform: translateY(0);}
-    100%{opacity:1; transform: translateY(-100px);}
+    0%{
+        opacity:0; 
+        transform: translateY(100px);
+    }
+    100%{
+        opacity:1; 
+        transform: translateY(0);
+    }
 }
 @keyframes leftIn{
-    0%{opacity:0; transform: translateX(-100px);}
-    100%{opacity:1; transform: translateX(0);}
+    0%{
+        opacity:0; 
+        transform: translateX(-100px);
+    }
+    100%{
+        opacity:1; 
+        transform: translateX(0);
+    }
+}
+
+/* scroll */
+.ScrollTitle{
+    padding-top: 40px;
+    font-size: 2rem;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.scrollTile{
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    margin-bottom: 80px;
+    img{
+        width: 150px;
+    }
 }
 
 /* タイル診断ボタン */
