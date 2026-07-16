@@ -1,0 +1,329 @@
+html{
+    font-size: 62.5%;
+}
+body{
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+
+.contain{
+    width: 100%;
+    max-width: 430px;  
+    min-width: 320px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 0 30px;
+    background: #FAF7EF;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* スタート画面 */
+.start-header {
+    position: absolute;
+    top: -50px;
+    right: 0;
+    z-index: 100;
+}
+.header-icon {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+.header-icon.left {
+    margin-left: 15px; 
+    margin-right: auto;
+}
+.header-icon.right {
+    margin-right: 15px; 
+}
+.header-icon img {
+    width: 28px;
+    height: auto;
+}
+.title{
+    font-size: 2rem;
+}
+.people{
+    width: 80%;
+}
+.startBtn{
+    margin-top: 10px;
+    width: 220px;
+    height: 54px;
+    background: #B9885A;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 2.4rem;
+    border: none;
+    cursor: pointer;
+}
+
+
+#startScreen {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* 質問画面のヘッダー */
+#quiz-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 10;
+}
+
+/* 結果画面のレイアウト */
+.resultWrap{
+    width: 100%;
+    height: auto;
+    min-height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.answerTitleWrap{
+    line-height: 1.8;
+    font-size: 1.6rem;
+}
+.answerTitle{
+    font-size: 3.2rem;
+}
+.imageWrap{
+    width: 100%;
+}
+
+.imageWrap img{
+    padding: 20px 0 10px;
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+}
+.colorSelector {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 35px;
+}
+.colorDot {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: inset 0 0 2px rgba(0,0,0,0.2); 
+    border: 0.5px solid #000000; 
+    transition: transform 0.1s ease;
+    display: inline-block;
+}
+.answer-Sub-Title{
+    font-size: 2rem;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.answerText{
+    font-size: 1.6rem;
+    text-align: left;
+    line-height: 1.6;
+}
+/* ボタン */
+.ResultBtnContain{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+}
+.resultBtn{
+    margin-top: 40px;
+    font-size: 1.6rem;
+    color: #fff;
+    width: 130px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.product{
+    background: #8B6644;
+}
+.share{
+    background: #B9885A;
+}
+.shareIcon{
+    width: 25px;
+}
+
+/* 質問画面 */
+.questionNumber{
+    font-size: 3.2rem;
+    padding-bottom: 40px;
+}
+h2{
+    font-size: 1.6rem;
+    font-weight: normal;
+}
+.questionView{
+    text-align: center;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.questionTitle{
+    font-size: 1.6rem;
+    line-height: 1.7;
+    font-weight: normal;
+    text-align: center;
+    margin: 0;
+}
+
+/* クイズ画面全体の箱 */
+#quizScreen{
+    position: relative;
+    min-height: 500px;
+    padding-bottom: 120px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+#fixed-Action-Area{
+    position: absolute;
+    bottom: 150px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    gap: 65px;
+}
+.questionBtn{
+    width: 120px;
+    height: 50px;
+    min-width: 120px;
+    max-width: 120px;
+    color: #fff;
+    font-size: 2.4rem;
+    border-radius: 10px;
+    border: none;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.noBtn{
+    background: #5A8BB9;
+}
+.yesBtn{
+    background: #B95A5A;
+}
+
+#resultScreen {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#confirmModal {
+    position: fixed; /* 画面全体に固定 */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4); /* 背景をうっすら黒く暗くする */
+    z-index: 1000; /* 何があっても一番手前に表示する */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalInner {
+    background: #FAF7EF; /* 画像と同じ淡いベージュ背景 */
+    width: 90%;
+    max-width: 380px;
+    padding: 50px 30px;
+    border-radius: 12px;
+    border: 1px solid #D9A07E; /* 統一感のある細い境界線 */
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+/* テキストのスタイル */
+.modalTitle {
+    font-size: 2.8rem; /* 大きなタイトル文字 */
+    font-weight: normal;
+    color: #000;
+    margin: 0 0 25px 0;
+}
+.modalDesc {
+    font-size: 1.4rem; /* 注意書きの小さな文字 */
+    color: #333;
+    margin: 0 0 45px 0;
+}
+
+/* ボタンの横並び */
+.modalButtons {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* ボタン同士の隙間 */
+}
+
+/* ボタン共通設定 */
+.modalBtn {
+    width: 120px;
+    height: 46px;
+    font-size: 2rem;
+    color: #fff;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-weight: normal;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* 画像のようなボタン下の影 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 左側：いいえ（くすんだグレー） */
+.cancelBtn {
+    background: #808080;
+}
+
+/* 右側：はい（明るい茶色） */
+.okBtn {
+    background: #B9885A;
+}

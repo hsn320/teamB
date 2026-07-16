@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/ress.css">
+    <link rel="stylesheet" href="css/test.css">
+
+    <script defer src="js/test.js"></script>
+    <title>タイル診断</title>
+</head>
+<body>
+
+    <div class="contain">
+
+        <div id="startScreen">
+            <div class="start-header">
+                <span class="header-icon right" onclick="openConfirmModal()">
+                    <img src="../img/reset.png" alt="閉じる">
+                </span>
+            </div>
+            <div id="startScreenInner">
+                <p class="title">あなたをタイルに例えると？<br>チャレンジしてみよう！</p>
+                <div class="illustration">
+                    <!-- ここにイラスト画像などを配置 -->
+                    <img src="img/people.png" alt="" class="people">
+                </div>
+                <!-- 🔑クリックしたらJSの initQuiz() を実行 -->
+                <button class="startBtn" onclick="initQuiz()">始める</button>
+            </div>
+        </div>
+
+        <div id="quizScreen" style="display: none;">
+
+            <div id="quiz-header">
+                <!-- 左上：戻るボタン（初期状態は非表示） -->
+                <span id="backBtn" class="header-icon left" onclick="goBack()" style="display: none;">
+                    <img src="../img/return.png" alt="戻る">
+                </span>
+                <!-- 右上：バツボタン（最初から表示） -->
+                <span id="closeBtn" class="header-icon right" onclick="openConfirmModal()">
+                    <img src="../img/reset.png" alt="閉じる">
+                </span>
+            </div>
+
+            <!-- 1. 質問テキストだけが入れ替わるエリア -->
+            <div id="dynamic-content"></div>
+
+            <!-- 2. 【位置固定】ボタンはJSの外に出して、HTML側で完全に固定しておく -->
+            <div id="fixed-Action-Area">
+                <!-- ボタン自体は共通なので、1つだけ置いておきます -->
+                <div class="buttons">
+                    <button class="questionBtn noBtn" onclick="answer('nextNo')">No</button>
+                    <button class="questionBtn yesBtn" onclick="answer('nextYes')">Yes</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="resultScreen" style="display: none;"></div>
+
+        <div id="confirmModal" style="display: none;">
+            <div class="modalInner">
+                <p class="modalTitle">本当に診断をやめる？</p>
+                <p class="modalDesc">※途中経過は残りません</p>
+                <div class="modalButtons">
+                    <!-- いいえ を押したらモーダルを閉じる -->
+                    <button class="modalBtn cancelBtn" onclick="closeConfirmModal()">いいえ</button>
+                    <!-- はい を押したらスタート画面に戻る -->
+                    <button class="modalBtn okBtn" onclick="confirmResetQuiz()">はい</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+</html>
