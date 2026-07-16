@@ -239,6 +239,7 @@ body{
         color: #fff;
     }
     h4 span {
+        height: 60px;
         margin: 0 16px 0 -20px;
     }
     img {
