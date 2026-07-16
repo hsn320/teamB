@@ -8,6 +8,9 @@
 
 body{
     background-color: var(--bg-beige);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 /* 三本線のスタイル */
@@ -44,30 +47,38 @@ body{
     position: fixed;
     top: 0;
     right: 0;
-    z-index: 101;  /* ドロワーより前面に */
+    z-index: 101;
 }
 
-/* ドロワーの開閉制御をクラスで管理 */
+/* ドロワー */
 .drawer {
     z-index: 100;
     position: fixed;
     top: 0;
     right: 0;
-    background-color: var(--bg-beige);
+    background-color: #FFF1d8;
     width: 230px;
-    height: 100dvh;
-    transform: translateX(100%); /* 初期状態 */
+    height: 100vh;
+    transform: translateX(100%);
     transition: transform 0.3s ease;
+    overflow-y: auto;
 }
 
 .drawer.open {
     transform: translateX(0%);
 }
-.drawer-nav-item {
-    border-bottom: 1px solid var(--bg-brown);
-    padding: 20px 0;
-    text-align: left;
+
+.drawer-nav-list {
+    padding: 80px 20px 20px;
+    margin: 0;
     list-style: none;
+}
+
+.drawer-nav-item {
+    border-bottom: 1px solid #B9885A;
+    padding: 20px 20px;
+    text-align: right;
+    font-size: 18px;
 }
 .drawer-nav-item a {
     font-size: 18px;
@@ -93,6 +104,7 @@ body{
     display: inline-block;
     transition: transform 0.3s ease;
     color: #B9885A;
+    width: 16px;
 }
 .arrow.open {
     transform: rotate(180deg);
@@ -114,7 +126,7 @@ body{
 
 .language-option {
     padding: 20px 0;
-    text-align: left;
+    text-align: right;
     font-size: 16px;
     cursor: pointer;
 }
@@ -122,19 +134,25 @@ body{
 .phrase{
     padding-top: 60px;
     text-align: center;
+    padding-bottom: 20px;
     h2{
-        margin-bottom: 0px;
-        font-size: 24px;
+    margin-bottom: 5px;
+    font-size: 24px;
+    font-weight: bold;
     }
     h3{
-        margin-top: 0;
+    margin-top: 0;
+    font-size: 18px;
+    font-weight: normal;
     }
 }
 .flowWrap {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: 0 20px 40px;
+    padding: 0 20px 20px;
+    max-width: 600px;
+    margin: 0 auto;
     img {
         object-fit: cover;
     }
@@ -147,8 +165,12 @@ body{
     height: 200px;
     box-shadow: 0px 2px 5px gainsboro;
     color: var(--color-darkBrown);
-    .text-content { flex: 0 0 160px; }
-    img { flex: 1; height: 100%; }
+    .text-content {
+        flex: 0 0 160px; 
+    }
+    img {
+        flex: 1; height: 100%; 
+    }
     h4 {
         margin: 0;
         display: flex;
@@ -172,7 +194,6 @@ body{
         font-size: 20px;
         flex-shrink: 0;
     }
-
     p {
         text-align: left;
         color: var(--color-darkBrown);

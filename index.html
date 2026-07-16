@@ -11,17 +11,15 @@
 <body>
     <!-- ハンバーガーメニュー -->
     <section class="hamburgerMenu">
-        <button id="n" class="hamburger-btn" aria-label="メニューを開く" aria-expanded="false" aria-controls="drawer"></button>
+        <button id="menuBtn" class="hamburger-btn">
         <div class="bar"></div>
         <div class="bar"></div>
         <div class="bar"></div>
         </button>
         <nav class="drawer" id="drawer">
             <ul class="drawer-nav-list">
-                <li class="drawer-nav-item language-item">
-                    <span class="language-toggle">
-                        言語設定 <span class="arrow">ｖ</span>
-                    </span>
+                <li class="drawer-nav-item language-item" style="cursor: pointer;">
+                    <div>言語設定 <img src="/image/downArrow.svg" alt="" class="arrow"></div>
                     <ul class="language-dropdown">
                         <li class="language-option">日本語</li>
                         <li class="language-option">繁體中文</li>
@@ -74,17 +72,6 @@
         <img src="/image/flow04.webp" alt="タイルを貼り終えた画像">
     </div>
 </section>
-
-
-<section class="scene">
-    <h3>こんな場所にも!</h3>
-    <div class="item01">
-        <p>商品１</p>
-        <img src="image/item01.webp" alt="">
-    </div>
-</section>
-
-
 
 </body>
 </html>

@@ -8,26 +8,18 @@ const arrow = document.querySelector('.arrow');
 menuBtn.addEventListener('click', () => {
     drawer.classList.toggle('open');
     menuBtn.classList.toggle('open');
-    menuBtn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+});
+
+// ドロワー外クリックで閉じる
+document.addEventListener('click', (e) => {
+    if (!drawer.contains(e.target) && !menuBtn.contains(e.target)) {
+        drawer.classList.remove('open');
+        menuBtn.classList.remove('open');
+    }
 });
 
 // 言語切替（item全体を対象にする）
 languageItem.addEventListener('click', () => {
     languageDropdown.classList.toggle('open');
     arrow.classList.toggle('open');
-});
-
-// 1つ目（menuBtn.classList.removeあり）を残す
-document.addEventListener('click', (e) => {
-    if (!drawer.contains(e.target) && !menuBtn.contains(e.target)) {
-        drawer.style.transform = 'translateX(100%)';
-        menuBtn.classList.remove('open');
-    }
-});
-
-// 2つ目（丸ごと削除）
-document.addEventListener('click', (e) => {
-    if (!drawer.contains(e.target) && !menuBtn.contains(e.target)) {
-        drawer.style.transform = 'translateX(100%)';
-    }
 });
