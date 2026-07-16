@@ -54,6 +54,7 @@ li{
     margin: 0 auto;
     padding-top: 100px;
     background: #FAF7EF;
+    overflow: hidden;
 }
 
 /* メインビジュアル */
@@ -212,6 +213,131 @@ li{
         transform: translateX(0);
     }
 }
+
+/* タイルフロー */
+.flowWrap {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 20px 40px;
+    img {
+        object-fit: cover;
+    }
+}
+.phrase{
+    padding-top: 60px;
+    text-align: center;
+    h2{
+        margin-bottom: 0px;
+        font-size: 24px;
+    }
+    h3{
+        margin-top: 0;
+    }
+}
+.flow-box {
+    display: flex;
+    align-items: stretch;
+    height: 200px;
+    box-shadow: 0px 2px 5px gainsboro;
+    color: #5A5048;
+    .text-content { 
+        flex: 0 0 160px; 
+    }
+    img { 
+        flex: 1; 
+        height: 100%; 
+    }
+    h4 {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        height: 50px;
+        padding: 0 0 0 20px;
+        color: #5A5048;
+        background-color: #D4C4A5;
+        font-size: 18px;
+        font-weight: normal;
+    }
+    h4 span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        margin: 0 16px 0 -20px;
+        background-color: #B9885A;
+        color: #fff;
+        font-size: 20px;
+        flex-shrink: 0;
+    }
+
+    p {
+        text-align: left;
+        color: #5A5048;
+        font-size: 13px;
+        line-height: 1.6;
+        padding: 10px 20px;
+        background-color: #FAF7EF;
+        flex: 1;
+        margin: 0;
+    }
+}
+
+.step-img-area{
+    width: 55%;
+    box-sizing: border-box;
+    img{
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: contain;
+    }
+}
+
+/* flow-02（reverse）のレイアウト */
+.flow-box.reverse {
+    flex-direction: row-reverse;
+
+    h4 {
+        flex-direction: row-reverse;
+        padding: 0 20px 0 0;
+    }
+    h4 span {
+        margin: 0 -20px 0 16px;
+    }
+    p {
+        text-align: right;
+    }
+}
+
+/* flow-04（完成）の個別レイアウト */
+.flow-last {
+    flex-direction: column;
+    height: auto;
+
+    .text-content {
+        flex-direction: row;
+        flex: none;        /* ← 追加 */
+    }
+    h4 {
+        height: 60px;
+        font-size: 20px;
+        background-color: #8B6644;
+        flex: 1;
+        color: #fff;
+    }
+    h4 span {
+        margin: 0 16px 0 -20px;
+    }
+    img {
+        flex: none;        /* ← 追加 */
+        height: 180px;
+        width: 100%;
+        display: block;    /* ← 追加（imgの下の隙間対策） */
+    }
+}
+
 
 /* scroll */
 .ScrollTitle{
