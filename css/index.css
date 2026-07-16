@@ -1,9 +1,9 @@
 
 :root {
     --bg-beige: #FAF7EF;
-    --bg-brown:#B9885A; /* ハンバーガーメニューやフッターに */
-    --bg-brown:
-    --font-color:#5A5048; /* 黒よりの茶 */
+    --bg-brown: #B9885A;
+    --color-darkBrown: #5A5048;
+    --bg-title: #D4C4A5;
 }
 
 body{
@@ -22,11 +22,9 @@ body{
 .hamburger-btn.open .bar:nth-child(1) {
   transform: translateY(9px) rotate(45deg);  /* 上の線を斜めに */
 }
-
 .hamburger-btn.open .bar:nth-child(2) {
   opacity: 0;  /* 中央の線を消す */
 }
-
 .hamburger-btn.open .bar:nth-child(3) {
   transform: translateY(-9px) rotate(-45deg);  /* 下の線を斜めに */
 }
@@ -35,7 +33,7 @@ body{
 .hamburger-btn {
     width: 60px;
     height: 60px;
-    background-color:var(--sub-color);
+    background-color:var(--bg-brown);
     border: none;
     display: flex;
     flex-direction: column;
@@ -46,26 +44,31 @@ body{
     position: fixed;
     top: 0;
     right: 0;
-    z-index: 101;  /*ドロワーより前面に */
+    z-index: 101;  /* ドロワーより前面に */
 }
 
+/* ドロワーの開閉制御をクラスで管理 */
 .drawer {
     z-index: 100;
     position: fixed;
     top: 0;
     right: 0;
-    background-color: var(--main-color);
-    width: 230px; 
+    background-color: var(--bg-beige);
+    width: 230px;
     height: 100dvh;
+    transform: translateX(100%); /* 初期状態 */
+    transition: transform 0.3s ease;
 }
 
+.drawer.open {
+    transform: translateX(0%);
+}
 .drawer-nav-item {
-    border-bottom: 1px solid var(--sub-color);
+    border-bottom: 1px solid var(--bg-brown);
     padding: 20px 0;
     text-align: left;
     list-style: none;
 }
-
 .drawer-nav-item a {
     font-size: 18px;
     color: #333;
@@ -73,22 +76,24 @@ body{
     display: block;
     
 }
-
 .drawer-nav-item:last-child {
     border-bottom: none;
 }
-
 .language-toggle {
+    background: none;
+    border: none;
+    padding: 0;
     cursor: pointer;
     font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
 }
-
 .arrow {
     display: inline-block;
     transition: transform 0.3s ease;
     color: #B9885A;
 }
-
 .arrow.open {
     transform: rotate(180deg);
 }
@@ -140,31 +145,21 @@ body{
     display: flex;
     align-items: stretch;
     height: 200px;
-    box-shadow: 0px 5px 5px gainsboro;
-
-    .text-content {
-        flex: 0 0 160px;
-        display: flex;
-        flex-direction: column;
-    }
-
-    img {
-        flex: 1;
-        height: 100%;
-    }
-
+    box-shadow: 0px 2px 5px gainsboro;
+    color: var(--color-darkBrown);
+    .text-content { flex: 0 0 160px; }
+    img { flex: 1; height: 100%; }
     h4 {
         margin: 0;
         display: flex;
         align-items: center;
         height: 50px;
         padding: 0 0 0 20px;
-        color: var(--font-color);
-        background-color: #FFE7C2;
+        color: var(--color-darkBrown);
+        background-color: var(--bg-title);
         font-size: 18px;
         font-weight: normal;
     }
-
     h4 span {
         display: flex;
         align-items: center;
@@ -172,7 +167,7 @@ body{
         width: 50px;
         height: 50px;
         margin: 0 16px 0 -20px;
-        background-color: #9C917A;
+        background-color: var(--bg-brown);
         color: #fff;
         font-size: 20px;
         flex-shrink: 0;
@@ -180,11 +175,11 @@ body{
 
     p {
         text-align: left;
-        color: var(--font-color);
+        color: var(--color-darkBrown);
         font-size: 13px;
         line-height: 1.6;
         padding: 10px 20px;
-        background-color: #D8C4A2;
+        background-color: var(--bg-beige);
         flex: 1;
         margin: 0;
     }
@@ -198,11 +193,9 @@ body{
         flex-direction: row-reverse;
         padding: 0 20px 0 0;
     }
-
     h4 span {
         margin: 0 -20px 0 16px;
     }
-
     p {
         text-align: right;
     }
@@ -212,25 +205,32 @@ body{
 .flow-last {
     flex-direction: column;
     height: auto;
-    box-shadow: 0px 5px #333;
 
     .text-content {
         flex-direction: row;
+        flex: none;        /* ← 追加 */
     }
-
     h4 {
         height: 60px;
         font-size: 20px;
-        background-color: #FFE7C2;
+        background-color: #8B6644;
         flex: 1;
+        color: #fff;
     }
-
     h4 span {
         margin: 0 16px 0 -20px;
     }
-
     img {
+        flex: none;        /* ← 追加 */
         height: 180px;
         width: 100%;
+        display: block;    /* ← 追加（imgの下の隙間対策） */
     }
+}
+
+.scene{
+    h3{
+        text-align: center;
+    }
+    padding-bottom: 30px;
 }

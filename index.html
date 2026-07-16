@@ -11,22 +11,21 @@
 <body>
     <!-- ハンバーガーメニュー -->
     <section class="hamburgerMenu">
-        <button id="menuBtn" class="hamburger-btn">
+        <button id="n" class="hamburger-btn" aria-label="メニューを開く" aria-expanded="false" aria-controls="drawer"></button>
         <div class="bar"></div>
         <div class="bar"></div>
         <div class="bar"></div>
         </button>
         <nav class="drawer" id="drawer">
             <ul class="drawer-nav-list">
-            <li class="drawer-nav-item language-item">
-                
-                    言語設定 <span class="arrow">ｖ</span>
-                
-                <ul class="language-dropdown">
-                    <li class="language-option">日本語</li>
-                    <span "language-option"></span>
-                    <li class="language-option">繁體中文</li>
-                </ul>
+                <li class="drawer-nav-item language-item">
+                    <span class="language-toggle">
+                        言語設定 <span class="arrow">ｖ</span>
+                    </span>
+                    <ul class="language-dropdown">
+                        <li class="language-option">日本語</li>
+                        <li class="language-option">繁體中文</li>
+                    </ul>
                 </li>
                 <li class="drawer-nav-item"><a href="index.html">TOP</a></li>
                 <li class="drawer-nav-item"><a href="#">タイル</a></li>
@@ -77,13 +76,14 @@
 </section>
 
 
-    <h3>こんな場所にも</h3>
+<section class="scene">
+    <h3>こんな場所にも!</h3>
+    <div class="item01">
+        <p>商品１</p>
+        <img src="image/item01.webp" alt="">
+    </div>
+</section>
 
-    <!-- 診断サイトへ -->
-    <section>
-        <p>colorsのタイルは全18種類！<br>あなたにあったタイルはどれ？</p>
-        <button class="sindanBtn">タイル診断</button>
-    </section>
 
 
 </body>

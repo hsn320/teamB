@@ -1,50 +1,33 @@
 const menuBtn = document.getElementById('menuBtn');
 const drawer = document.getElementById('drawer');
-const languageToggle = document.querySelector('.language-toggle');
+const languageItem = document.querySelector('.language-item'); // クラス名を変更
 const languageDropdown = document.querySelector('.language-dropdown');
 const arrow = document.querySelector('.arrow');
 
-
-// ドロワーを最初は非表示にする
-drawer.style.transform = 'translateX(100%)';
-drawer.style.transition = 'transform 0.3s ease';
-
+// ハンバーガーメニュー開閉
 menuBtn.addEventListener('click', () => {
-    const isOpen = drawer.style.transform === 'translateX(0%)';
-    
-    if (isOpen) {
-    // 閉じる
-    drawer.style.transform = 'translateX(100%)';
-    menuBtn.classList.remove('open');
-    } else {
-    // 開く
-    drawer.style.transform = 'translateX(0%)';
-    menuBtn.classList.add('open');
-    }
+    drawer.classList.toggle('open');
+    menuBtn.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
 });
 
+// 言語切替（item全体を対象にする）
+languageItem.addEventListener('click', () => {
+    languageDropdown.classList.toggle('open');
+    arrow.classList.toggle('open');
+});
+
+// 1つ目（menuBtn.classList.removeあり）を残す
 document.addEventListener('click', (e) => {
     if (!drawer.contains(e.target) && !menuBtn.contains(e.target)) {
-    drawer.style.transform = 'translateX(100%)';
-    menuBtn.classList.remove('open');  // 追加
+        drawer.style.transform = 'translateX(100%)';
+        menuBtn.classList.remove('open');
     }
 });
 
-// ドロワー外をクリックで閉じる
+// 2つ目（丸ごと削除）
 document.addEventListener('click', (e) => {
     if (!drawer.contains(e.target) && !menuBtn.contains(e.target)) {
-    drawer.style.transform = 'translateX(100%)';
-    }
-});
-
-languageToggle.addEventListener('click', () => {
-    const isOpen = languageDropdown.classList.contains('open');
-
-    if (isOpen) {
-    languageDropdown.classList.remove('open');
-    arrow.classList.remove('open');
-    } else {
-    languageDropdown.classList.add('open');
-    arrow.classList.add('open');
+        drawer.style.transform = 'translateX(100%)';
     }
 });
