@@ -102,7 +102,7 @@ function displayCurrentData() {
                 </div>
                 <p class="answerText">${currentData.text}</p>
                 <div class="ResultBtnContain">
-                    <button class="resultBtn product" onclick="location.href='${currentData.link}'">商品ページへ</button>
+                    <button class="resultBtn product" onclick="window.open('${currentData.link}', '_blank')">商品ページへ</button>
                     <button class="resultBtn share" onclick="resetQuiz()">
                         <img src="../img/share.png" class="shareIcon">
                         シェア

@@ -78,6 +78,9 @@ items.forEach((items) =>
     observer.observe(items)
 );
 
+
+
+
 const menuBtn = document.getElementById('menuBtn');
 const drawer = document.getElementById('drawer');
 const langItem = document.querySelector('.language-item');
@@ -106,7 +109,7 @@ langItem.addEventListener('click', (e) => {
 
 // スクロール
 const scrollContainer = document.getElementById('autoScrollTile');
-let scrollSpeed = 2; // スクロール速度
+let scrollSpeed = 1; // スクロール速度
 let activeAnimation = true;
 
 // 自動スクロールを処理する関数

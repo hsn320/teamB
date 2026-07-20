@@ -363,7 +363,7 @@ li{
 @keyframes leftIn{
     0%{
         opacity:0; 
-        transform: translateX(-100px);
+        transform: translateX(-70px);
     }
     100%{
         opacity:1; 
@@ -382,7 +382,6 @@ li{
         object-fit: cover;
     }
 }
-
 .phrase{
     padding-top: 60px;
     text-align: center;
@@ -398,106 +397,81 @@ li{
         font-weight: normal;
     }
 }
-
-
 /* flowの共通設定 */
 .flow-box {
     display: flex;
-    align-items: stretch;
+    width: 100%;
     height: 200px;
     box-shadow: 0px 2px 5px gainsboro;
     color: var(--color-darkBrown);
     overflow: hidden;
-    .text-content {
-        flex: 0 0 160px; 
-    }
     img {
         flex: 1; 
         height: 100%;
     }
-    h4 {
-        margin: 0;
+    .flowTitle{
         display: flex;
+        justify-content: flex-start;
         align-items: center;
-        height: 50px;
-        padding: 0 0 0 20px;
-        color: var(--color-darkBrown);
-        background-color: var(--bg-title);
-        font-size: 1.8rem;
-        font-weight: normal;
-    }
-    h4 span {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 50px;
-        height: 50px;
-        margin: 0 16px 0 -20px;
-        background-color: var(--bg-brown);
-        color: #fff;
+        gap: 20px;
+        background: var(--bg-title);
+        height: 60px;
         font-size: 2rem;
-        flex-shrink: 0;
+        font-weight: normal;
+        margin: 0;
+        span{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: var(--bg-brown);
+            color: var(--bg-beige);
+            width: 40px;
+            height: 60px;
+        }
+    }
+    .flowSecondTitle{
+        gap: 10px;
     }
     p {
         text-align: left;
         color: var(--color-darkBrown);
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         line-height: 1.6;
-        padding: 10px 20px;
+        padding: 40px 20px;
         background-color: var(--bg-beige);
-        flex: 1;
-        margin: 0;
     }
 }
-
-/* flow-02（reverse）のレイアウト */
-.flow-box.reverse {
-    flex-direction: row-reverse;
-
-    h4 {
-        flex-direction: row-reverse;
-        padding: 0 20px 0 0;
-    }
-    h4 span {
-        margin: 0 -20px 0 16px;
-    }
-    p {
-        text-align: right;
-    }
-}
-
-/* flow-04（完成）の個別レイアウト */
-.flow-last {
+/* flow-04 */
+.flowLast {
+    width: 100%;
+    height: auto; 
     flex-direction: column;
-    height: auto;
-
-    .text-content {
-        flex-direction: row;
-        flex: none; 
-    }
-    h4 {
-        height: 60px;
-        font-size: 2rem;
+    box-sizing: border-box;
+    .flowTitle {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; 
+        height: 55px;
         background-color: #8B6644;
-        flex: 1;
-        color: #fff;
+        color: var(--bg-beige);
     }
-    h4 span {
-        height: 60px;
-        margin: 0 16px 0 -20px;
+    .flowTitle span {
+        width: 50px;
+        height: 55px;
+        background-color: #B9885A;
+        color: #fff;
+        font-size: 2rem;
+    }
+    .flowTitle::after {
+        content: "";
+        display: inline-block;
+        width: 50px;
     }
     img {
-        flex: none;
-        height: 180px;
-        width: 100%;
         display: block;
-    }
-}
-
-.scene{
-    padding-bottom: 30px;
-    h3{
-        text-align: center;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
     }
 }
 

@@ -23,10 +23,10 @@
             <div id="startScreenInner">
                 <p class="title">あなたをタイルに例えると？<br>チャレンジしてみよう！</p>
                 <div class="illustration">
-                    <!-- ここにイラスト画像などを配置 -->
+
                     <img src="img/people.png" alt="" class="people">
                 </div>
-                <!-- 🔑クリックしたらJSの initQuiz() を実行 -->
+                <!-- クリック initQuiz() 実行 -->
                 <button class="startBtn" onclick="initQuiz()">始める</button>
             </div>
         </div>
@@ -34,22 +34,22 @@
         <div id="quizScreen" style="display: none;">
 
             <div id="quiz-header">
-                <!-- 左上：戻るボタン（初期状態は非表示） -->
+                <!-- 左上：戻るボタン-->
                 <span id="backBtn" class="header-icon left" onclick="goBack()" style="display: none;">
                     <img src="../img/return.png" alt="戻る">
                 </span>
-                <!-- 右上：バツボタン（最初から表示） -->
+                <!-- 右上：バツボタン-->
                 <span id="closeBtn" class="header-icon right" onclick="openConfirmModal()">
                     <img src="../img/reset.png" alt="閉じる">
                 </span>
             </div>
 
-            <!-- 1. 質問テキストだけが入れ替わるエリア -->
+            <!-- 質問テキスト入れ替わる -->
             <div id="dynamic-content"></div>
 
-            <!-- 2. 【位置固定】ボタンはJSの外に出して、HTML側で完全に固定しておく -->
+            <!-- 位置固定 -->
             <div id="fixed-Action-Area">
-                <!-- ボタン自体は共通なので、1つだけ置いておきます -->
+
                 <div class="buttons">
                     <button class="questionBtn noBtn" onclick="answer('nextNo')">No</button>
                     <button class="questionBtn yesBtn" onclick="answer('nextYes')">Yes</button>
@@ -64,9 +64,9 @@
                 <p class="modalTitle">本当に診断をやめる？</p>
                 <p class="modalDesc">※途中経過は残りません</p>
                 <div class="modalButtons">
-                    <!-- いいえ を押したらモーダルを閉じる -->
+                    <!-- いいえ モーダルを閉じる -->
                     <button class="modalBtn cancelBtn" onclick="closeConfirmModal()">いいえ</button>
-                    <!-- はい を押したらスタート画面に戻る -->
+                    <!-- はい スタート画面に戻る -->
                     <button class="modalBtn okBtn" onclick="confirmResetQuiz()">はい</button>
                 </div>
             </div>
