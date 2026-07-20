@@ -17,6 +17,8 @@ li{
     min-height: 100vh;
     position: relative;
 }
+
+/*  ラインナップ   */
 .lineup{
     position: fixed;
     top: 70%;
@@ -52,13 +54,155 @@ li{
     min-width: 380px;
     min-height: 100vh;
     margin: 0 auto;
-    padding-top: 100px;
     background: #FAF7EF;
     overflow: hidden;
+    position: relative;
+    clip-path: inset(0 0 0 0);
 }
 
-/* メインビジュアル */
+/*   ハンバーガーメニュー   */
+.hamburgerMenu {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); 
+    width: 100%;
+    max-width: 430px;
+    min-width: 380px;         
+    height: 80px;
+    background-color: #FAF7EF;
+    z-index: 101;
+    display: flex;
+    justify-content: flex-end;
+}
+.hamburger-btn {
+    --bar-height: 4px;
+    --bar-gap: 10px;
+
+    width: 80px;
+    height: 80px;
+    background-color: #B9885A;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: var(--bar-gap); 
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 101;
+}
+.bar {
+    width: 45px;
+    height: var(--bar-height); 
+    background-color: #fff;
+    /* border-radius: 2px; */
+    transition: 0.3s ease;
+}
+
+.hamburger-btn.open .bar:nth-child(1) { 
+    transform: translateY(calc(var(--bar-height) + var(--bar-gap))) rotate(45deg); 
+}
+.hamburger-btn.open .bar:nth-child(2) { 
+    opacity: 0; 
+}
+.hamburger-btn.open .bar:nth-child(3) { 
+    transform: translateY(calc((var(--bar-height) + var(--bar-gap)) * -1)) rotate(-45deg); 
+}
+
+/*   ドロワーメニュー   */
+.drawer {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    margin-left: 215px;
+    background-color: #FFF1d8;
+    width: 230px;
+    height: 100vh;
+    transform: translateX(0); 
+    transition: transform 0.3s ease;
+    overflow-y: auto;
+}
+.drawer.open { 
+    transform: translateX(-230px); 
+}
+
+.drawer-nav-list {
+    padding: 80px 0 20px;
+    margin: 0;
+    list-style: none;
+}
+.drawer-nav-item {
+    padding: 20px 40px;
+    text-align: right;
+    font-size: 1.8rem;
+    position: relative;
+}
+.drawer-nav-item::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    
+    background-color: #B9885A;
+    height: 1px;
+    width: 80%;
+}
+.drawer-nav-item a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+}
+.drawer-nav-item:last-child { 
+    border-bottom: none; 
+}
+
+.language-toggle {
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 1.8rem;
+    color: #333;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+}
+.arrow {
+    width: 14px;
+    transition: transform 0.3s;
+}
+.language-item.open .arrow { 
+    transform: rotate(180deg); 
+}
+
+.language-dropdown {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 0;           
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+.language-item.open .language-dropdown { 
+    max-height: 200px; 
+}
+
+.language-option {
+    padding: 15px 0 0;
+    font-size: 16px;
+    color: #000;
+    cursor: pointer;
+}
+
+
+/*   メインビジュアル  */
 .mainVisual{
+    margin-top: 80px;
     animation: mainVisual 19s linear infinite;
     width: auto;
     height: 700px;
@@ -123,10 +267,6 @@ li{
     }
 }
 
-.content{
-    padding: 0 20px;
-}
-
 .tileBox{
     width: 100%;
     height: 225px;
@@ -147,7 +287,7 @@ li{
 }
 
 
-/* 見出しテキスト */
+/*   見出しテキスト   */
 .Texts{
     display: flex;
     justify-content: center;
@@ -162,14 +302,19 @@ li{
     }
 }
 
+.content{
+    padding: 0 20px;
+}
+
+
 /* before / after*/
-.frow{
+.BeforeAfter{
     width: 100%;
     img{
         width: 100%;
     }
 
-    /* アニメーション下 */
+    /*   アニメーション下   */
     .scrollIn{
         opacity: 0;
     }
@@ -178,7 +323,7 @@ li{
         animation-delay: .3s;
     }
 
-    /* アニメーション左 */
+    /*   アニメーション左   */
     .linkWrap{
         position: relative;
         opacity: 0;
@@ -214,7 +359,7 @@ li{
     }
 }
 
-/* タイルフロー */
+/*   タイルフロー   */
 .flowWrap {
     display: flex;
     flex-direction: column;
