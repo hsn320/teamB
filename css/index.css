@@ -6,6 +6,8 @@
 }
 html{
     font-size: 62.5%;
+    scroll-padding-top: 150px;
+    /* scroll-behavior: smooth; */
 }
 body{
     margin: 0;
@@ -510,11 +512,15 @@ li{
     display: flex;
     gap: 30px;
     overflow-x: auto;
+    margin-bottom: 80px;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    margin-bottom: 80px;
+    &::-webkit-scrollbar {
+        display: none;
+    }
     img{
         width: 150px;
+        flex-shrink: 0;
     }
 }
 

@@ -52,6 +52,7 @@ const options = {
     threshold: 0
 }
 
+
 const io = new IntersectionObserver(sc, options);
 const link = new IntersectionObserver(lin, options);
 const rside = new IntersectionObserver(rsin, options);
@@ -77,64 +78,6 @@ items.forEach((items) =>
     observer.observe(items)
 );
 
-// const menuBtn = document.getElementById('menuBtn');
-// const drawer = document.getElementById('drawer');
-// const langItem = document.querySelector('.language-item');
-
-// // メニューの開閉状態をトグルする関数
-// const toggleMenu = (force) => {
-//     const isOpen = typeof force === 'boolean' ? force : !drawer.classList.contains('open');
-//     drawer.classList.toggle('open', isOpen);
-//     menuBtn.classList.toggle('open', isOpen);
-// };
-
-// // ハンバーガーボタンクリック
-// menuBtn.addEventListener('click', () => toggleMenu());
-
-// // ドロワー外クリックで閉じる
-// document.addEventListener('click', (e) => {
-//     if (!drawer.contains(e.target) && !menuBtn.contains(e.target)) toggleMenu(false);
-// });
-
-// // 言語切替（トグルクラスを1つに絞るため、親のliにopenをつける設計に変更）
-// langItem.addEventListener('click', () => langItem.classList.toggle('open'));
-
-
-// const menuBtn = document.getElementById('menuBtn');
-// const drawer = document.getElementById('drawer');
-// const langItem = document.querySelector('.language-item');
-// const contain = document.querySelector('.contain');
-// const hamburgerMenu = document.querySelector('.hamburgerMenu');
-
-// // メニューの開閉状態をトグル
-// const toggleMenu = (force) => {
-//     const isOpen = typeof force === 'boolean' ? force : !drawer.classList.contains('open');
-//     drawer.classList.toggle('open', isOpen);
-//     menuBtn.classList.toggle('open', isOpen);
-// };
-
-// // ハンバーガーボタンクリック
-// menuBtn.addEventListener('click', () => toggleMenu());
-
-// // ドロワー外クリック閉じる
-// document.addEventListener('click', (e) => {
-//     if (!drawer.contains(e.target) && !menuBtn.contains(e.target)) toggleMenu(false);
-// });
-
-// // 言語切替
-// langItem.addEventListener('click', (e) => {
-//     e.stopPropagation();
-//     langItem.classList.toggle('open');
-// });
-
-// contain.addEventListener('scroll', () => {
-//     const scrollTop = contain.scrollTop;
-    
-//     hamburgerMenu.style.top = `${scrollTop}px`;
-    
-//     drawer.style.top = `${scrollTop}px`;
-// });
-
 const menuBtn = document.getElementById('menuBtn');
 const drawer = document.getElementById('drawer');
 const langItem = document.querySelector('.language-item');
@@ -159,3 +102,34 @@ langItem.addEventListener('click', (e) => {
     e.stopPropagation();
     langItem.classList.toggle('open');
 });
+
+
+// スクロール
+const scrollContainer = document.getElementById('autoScrollTile');
+let scrollSpeed = 2; // スクロール速度
+let activeAnimation = true;
+
+// 自動スクロールを処理する関数
+const autoScrollLoop = () => {
+    if (activeAnimation) {
+
+        scrollContainer.scrollLeft += scrollSpeed;
+        
+        if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth - scrollContainer.clientWidth) {
+            scrollContainer.scrollLeft = 0;
+        }
+    }
+    requestAnimationFrame(autoScrollLoop);
+};
+
+const stopScroll = () => activeAnimation = false;
+
+const startScroll = () => activeAnimation = true;
+
+scrollContainer.addEventListener('mouseenter', stopScroll);
+scrollContainer.addEventListener('mouseleave', startScroll);
+scrollContainer.addEventListener('touchstart', stopScroll);
+scrollContainer.addEventListener('touchend', startScroll);
+
+
+autoScrollLoop();
