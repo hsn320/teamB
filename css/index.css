@@ -1,3 +1,9 @@
+:root {
+    --bg-beige: #FAF7EF;
+    --bg-brown: #B9885A;
+    --color-darkBrown: #5A5048;
+    --bg-title: #D4C4A5;
+}
 html{
     font-size: 62.5%;
 }
@@ -360,38 +366,50 @@ li{
 }
 
 /*   タイルフロー   */
+
 .flowWrap {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: 0 20px 40px;
+    /* padding: 0 20px 20px; */
+    max-width: 430px;
+    margin: 0 auto;
     img {
         object-fit: cover;
     }
 }
+
 .phrase{
     padding-top: 60px;
     text-align: center;
+    padding-bottom: 20px;
     h2{
-        margin-bottom: 0px;
-        font-size: 24px;
+        margin-bottom: 5px;
+        font-size: 2.4rem;
+        font-weight: bold;
     }
     h3{
         margin-top: 0;
+        font-size: 1.8rem;
+        font-weight: normal;
     }
 }
+
+
+/* flowの共通設定 */
 .flow-box {
     display: flex;
     align-items: stretch;
     height: 200px;
     box-shadow: 0px 2px 5px gainsboro;
-    color: #5A5048;
-    .text-content { 
+    color: var(--color-darkBrown);
+    overflow: hidden;
+    .text-content {
         flex: 0 0 160px; 
     }
-    img { 
+    img {
         flex: 1; 
-        height: 100%; 
+        height: 100%;
     }
     h4 {
         margin: 0;
@@ -399,9 +417,9 @@ li{
         align-items: center;
         height: 50px;
         padding: 0 0 0 20px;
-        color: #5A5048;
-        background-color: #D4C4A5;
-        font-size: 18px;
+        color: var(--color-darkBrown);
+        background-color: var(--bg-title);
+        font-size: 1.8rem;
         font-weight: normal;
     }
     h4 span {
@@ -411,32 +429,20 @@ li{
         width: 50px;
         height: 50px;
         margin: 0 16px 0 -20px;
-        background-color: #B9885A;
+        background-color: var(--bg-brown);
         color: #fff;
-        font-size: 20px;
+        font-size: 2rem;
         flex-shrink: 0;
     }
-
     p {
         text-align: left;
-        color: #5A5048;
-        font-size: 13px;
+        color: var(--color-darkBrown);
+        font-size: 1.3rem;
         line-height: 1.6;
         padding: 10px 20px;
-        background-color: #FAF7EF;
+        background-color: var(--bg-beige);
         flex: 1;
         margin: 0;
-    }
-}
-
-.step-img-area{
-    width: 55%;
-    box-sizing: border-box;
-    img{
-        width: 100%;
-        height: auto;
-        display: block;
-        object-fit: contain;
     }
 }
 
@@ -467,12 +473,13 @@ li{
     }
     h4 {
         height: 60px;
-        font-size: 20px;
+        font-size: 2rem;
         background-color: #8B6644;
         flex: 1;
         color: #fff;
     }
     h4 span {
+        height: 60px;
         margin: 0 16px 0 -20px;
     }
     img {
@@ -483,6 +490,12 @@ li{
     }
 }
 
+.scene{
+    padding-bottom: 30px;
+    h3{
+        text-align: center;
+    }
+}
 
 /* scroll */
 .ScrollTitle{
