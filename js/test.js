@@ -27,7 +27,7 @@ const testData = {
         type: "result",
         title: "大正カフェ",
         link: "https://colorstw.com/tile/taisyoucafe",
-        MainImage: "../img/TaisyouBlue.png",
+        MainImage: "img/TaisyouBlue.png",
         colors: [
             { code: "#737329", img:"../img/TaisyouGreen.png"},
             { code: "#032C4C", img:"../img/TaisyouBlue.png"},
@@ -104,7 +104,7 @@ function displayCurrentData() {
                 <div class="ResultBtnContain">
                     <button class="resultBtn product" onclick="window.open('${currentData.link}', '_blank')">商品ページへ</button>
                     <button class="resultBtn share" onclick="resetQuiz()">
-                        <img src="../img/share.png" class="shareIcon">
+                        <img src="img/share.png" class="shareIcon">
                         シェア
                     </button>
                 </div>
