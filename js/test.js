@@ -185,5 +185,5 @@ function closeConfirmModal() {
 }
 function confirmResetQuiz() {
     document.getElementById("confirmModal").style.display = "none";
-    window.location.href = "../index.html"; 
+    window.location.href = "index.html"; 
 }
