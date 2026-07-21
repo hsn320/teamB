@@ -24,13 +24,17 @@ li{
     min-height: 100vh;
     position: relative;
 }
+.lineup {
+    display: none;
+}
 
-@media (min-width: 1000px) {
+@media (min-width: 1000px){
     .pc-contain {
         background: url(../img/bg.png) center center / cover no-repeat fixed;
     }
     /*  ラインナップ   */
     .lineup{
+        display: block;
         position: fixed;
         top: 70%;
         left: calc(50% + 215px + 150px);
@@ -406,19 +410,26 @@ li{
     color: var(--color-darkBrown);
     overflow: hidden;
     img {
-        flex: 1; 
+        flex: 1;
+        min-width: 0;
         height: 100%;
+    }
+    .text-content {
+        flex: 0 0 160px; 
+        display: flex;
+        flex-direction: column;
     }
     .flowTitle{
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        gap: 20px;
+        gap: 35px;
         background: var(--bg-title);
         height: 60px;
         font-size: 2rem;
         font-weight: normal;
         margin: 0;
+        white-space: nowrap;
         span{
             display: flex;
             justify-content: center;
@@ -427,17 +438,20 @@ li{
             color: var(--bg-beige);
             width: 40px;
             height: 60px;
+            flex-shrink: 0;
         }
     }
     .flowSecondTitle{
-        gap: 10px;
+        gap: 30px;
     }
     p {
         text-align: left;
         color: var(--color-darkBrown);
         font-size: 1.2rem;
         line-height: 1.6;
-        padding: 40px 20px;
+        margin: 0;
+        padding: 40px 30px;
+        flex: 1;
         background-color: var(--bg-beige);
     }
 }
@@ -447,6 +461,9 @@ li{
     height: auto; 
     flex-direction: column;
     box-sizing: border-box;
+    .text-content{
+        flex: none;
+    }
     .flowTitle {
         display: flex;
         align-items: center;
