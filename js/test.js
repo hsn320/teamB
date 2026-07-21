@@ -29,11 +29,11 @@ const testData = {
         link: "https://colorstw.com/tile/taisyoucafe",
         MainImage: "img/TaisyouBlue.png",
         colors: [
-            { code: "#737329", img:"../img/TaisyouGreen.png"},
-            { code: "#032C4C", img:"../img/TaisyouBlue.png"},
-            { code: "#99A0AF", img:"../img/TaisyouGray.png"},
-            { code: "#EBD5C9", img:"../img/TaisyouPink.png"},
-            { code: "#FFFFFF", img:"../img/TaisyouWhite.png"},
+            { code: "#737329", img:"img/TaisyouGreen.png"},
+            { code: "#032C4C", img:"img/TaisyouBlue.png"},
+            { code: "#99A0AF", img:"img/TaisyouGray.png"},
+            { code: "#EBD5C9", img:"img/TaisyouPink.png"},
+            { code: "#FFFFFF", img:"img/TaisyouWhite.png"},
         ],
         text: "<span class='answer-Sub-Title'>上品で懐の深い、おもてなしの達人</span><br> 誰に対しても丁寧で、レトロで落ち着きのある上品な雰囲気をまとったあなた。お洒落でありながらホッとする大正カフェは、あなたの柔らかい物腰と丁寧な暮らしぶりにぴったりです。"
     },
@@ -44,20 +44,18 @@ let quizHistory = [];
 
 
 function initQuiz() {
-    // 1. スタート画面を非表示にする
     document.getElementById("startScreen").style.display = "none";
-    // 2. 診断メイン画面を表示する
+
     document.getElementById("quizScreen").style.display = "block";
     document.getElementById("resultScreen").style.display = "none";
     
-    // 3. 最初の質問(q1)を画面に描画する
     currentId = "q1";
     quizHistory = [];
     displayCurrentData();
 }
 
 function displayCurrentData() {
-    // 今のID（例: "q1"）のデータをtestDataから引っ張ってくる
+
     const currentData = testData[currentId];
     const container = document.getElementById("dynamic-content");
     const actionArea = document.getElementById("fixed-Action-Area");
@@ -68,9 +66,9 @@ function displayCurrentData() {
     const backBtn = document.getElementById("backBtn");
     const closeBtn = document.getElementById("closeBtn");
 
-    // もしデータの種類（type）が "result"（結果）だった場合の処理
+
     if (currentData.type === "result") {
-        // 結果画面のときは、固定ボタンエリアを非表示にする
+
         actionArea.style.display = "none";
 
         quizScreen.style.display = "none";
@@ -80,7 +78,7 @@ function displayCurrentData() {
         let colorButtonsHtml = "";
         if (currentData.colors) {
             currentData.colors.forEach(color => {
-                // クリックされたら changeTileImage() という画像を切り替える関数を呼ぶ
+
                 colorButtonsHtml += `
                     <span class="colorDot" 
                         style="background-color: ${color.code};" 
@@ -90,7 +88,7 @@ function displayCurrentData() {
             });
         }
 
-        // 結果用の画面表示に書き換える（ボタンを消して、タイトルと結果文を出す）
+        // 結果画面
         resultScreen.innerHTML = `
             <div class="resultWrap">
                 <h2 class="answerTitleWrap">あなたのタイルは、<br><span class="answerTitle">${currentData.title}</span></h2>
@@ -111,7 +109,7 @@ function displayCurrentData() {
             </div>
             <div class="start-header">
                 <span class="header-icon right" onclick="openConfirmModal()">
-                    <img src="../img/reset.png" alt="閉じる">
+                    <img src="img/reset.png" alt="閉じる">
                 </span>
             </div>
         `;
@@ -123,7 +121,6 @@ function displayCurrentData() {
         if (quizScreen) { 
             quizScreen.style.paddingBottom = ""; 
         }
-        // 質問画面のときは、固定ボタンエリアを表示する
         actionArea.style.display = "block";
 
         if (backBtn && closeBtn) {
@@ -136,7 +133,6 @@ function displayCurrentData() {
             }
         }
 
-        // 質問画面のHTMLを流し込む（NoとYesのボタンもここに含める）
         container.innerHTML = `
             <div class="questionView">
                 <div class="questionNumber">${currentData.number}</div>
@@ -147,21 +143,18 @@ function displayCurrentData() {
 }
 
 function answer(choiceType) {
-    // choiceType には 'nextYes' または 'nextNo' が入ってくる
     const currentData = testData[currentId];
 
     quizHistory.push(currentId);
     
-    // 現在の質問データから、次の行き先（"q3" や "r1" など）を割り出して、現在のIDを更新する
     currentId = currentData[choiceType];
-    
-    // 次の画面を表示するために、もう一度画面更新関数を呼ぶ
+
     displayCurrentData();
 }
 
 function goBack() {
     if (quizHistory.length > 0) {
-        // 履歴の最後から1つ取り出して、現在のIDに戻す
+
         currentId = quizHistory.pop();
         displayCurrentData();
     }
@@ -183,7 +176,6 @@ function changeTileImage(newImgSrc) {
 document.getElementById("startScreen").style.display = "block";
 document.getElementById("quizScreen").style.display = "none";
 document.getElementById("resultScreen").style.display = "none";
-// displayCurrentData();
 
 function openConfirmModal() {
     document.getElementById("confirmModal").style.display = "flex";

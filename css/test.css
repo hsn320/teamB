@@ -260,49 +260,49 @@ h2{
 }
 
 #confirmModal {
-    position: fixed; /* 画面全体に固定 */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.4); /* 背景をうっすら黒く暗くする */
-    z-index: 1000; /* 何があっても一番手前に表示する */
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1000;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .modalInner {
-    background: #FAF7EF; /* 画像と同じ淡いベージュ背景 */
+    background: #FAF7EF;
     width: 90%;
     max-width: 380px;
     padding: 50px 30px;
     border-radius: 12px;
-    border: 1px solid #D9A07E; /* 統一感のある細い境界線 */
+    border: 1px solid #D9A07E;
     text-align: center;
     box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
-/* テキストのスタイル */
+
 .modalTitle {
-    font-size: 2.8rem; /* 大きなタイトル文字 */
+    font-size: 2.8rem;
     font-weight: normal;
     color: #000;
     margin: 0 0 25px 0;
 }
 .modalDesc {
-    font-size: 1.4rem; /* 注意書きの小さな文字 */
+    font-size: 1.4rem;
     color: #333;
     margin: 0 0 45px 0;
 }
 
-/* ボタンの横並び */
+
 .modalButtons {
     display: flex;
     justify-content: center;
-    gap: 30px; /* ボタン同士の隙間 */
+    gap: 30px; 
 }
 
-/* ボタン共通設定 */
+
 .modalBtn {
     width: 120px;
     height: 46px;
@@ -312,18 +312,18 @@ h2{
     border: none;
     cursor: pointer;
     font-weight: normal;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* 画像のようなボタン下の影 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* 左側：いいえ（くすんだグレー） */
+
 .cancelBtn {
     background: #808080;
 }
 
-/* 右側：はい（明るい茶色） */
+
 .okBtn {
     background: #B9885A;
 }
