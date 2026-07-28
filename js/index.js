@@ -1,3 +1,4 @@
+// スクロールオブジェクト
 const scin = document.querySelectorAll(".scrollIn");
 const linkIn = document.querySelectorAll(".linkWrap");
 const rightSideIn = document.querySelectorAll(".sideRightWrap");
@@ -79,8 +80,7 @@ items.forEach((items) =>
 );
 
 
-
-
+// ハンバーガーメニュー
 const menuBtn = document.getElementById('menuBtn');
 const drawer = document.getElementById('drawer');
 const langItem = document.querySelector('.language-item');
