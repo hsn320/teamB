@@ -51,6 +51,7 @@ li{
     margin-right: auto;
 }
 .header-icon.right {
+    margin-top: 15px;
     margin-right: 15px; 
 }
 .header-icon img {
@@ -120,8 +121,8 @@ li{
 }
 
 .imageWrap img{
-    width: 60%;
-    height: 60%;
+    width: 40%;
+    height: 40%;
     object-fit: cover;
 }
 .colorSelector {
@@ -129,6 +130,7 @@ li{
     justify-content: center;
     gap: 12px;
     margin-bottom: 35px;
+    flex-wrap: wrap;
 }
 .colorDot {
     width: 18px;
