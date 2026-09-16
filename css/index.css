@@ -263,19 +263,22 @@ li{
 }
 
 #svgMask{
-    width: 80%;
+    width: 85%;
     transform: rotate(-5deg);
+}
+.st0 {
+    fill: none;
 }
 #mainTxt {
     fill: none; 
     stroke: #ffffff; 
-    stroke-width: 29; 
+    stroke-width: 30;
     stroke-linecap: round; 
     stroke-linejoin: round; 
     stroke-dasharray: 2000; 
-    stroke-dashoffset: 2000; 
+    stroke-dashoffset: 1870; 
     shape-rendering: geometricPrecision;
-    animation: draw 8s ease forwards;
+    animation: draw 7s ease forwards;
 }
 @keyframes draw {
     to {
