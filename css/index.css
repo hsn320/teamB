@@ -278,7 +278,12 @@ li{
     stroke-dasharray: 2000; 
     stroke-dashoffset: 1870; 
     shape-rendering: geometricPrecision;
-    animation: draw 7s ease forwards;
+
+    /* 日本ver */
+    /* animation: draw 7s ease forwards; */
+
+    /* 台湾ver */
+    animation: draw 5s ease forwards;
 }
 @keyframes draw {
     to {
