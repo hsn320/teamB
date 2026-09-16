@@ -341,18 +341,70 @@ li{
 
 /* before / after*/
 .BeforeAfter{
+    position: relative;
     width: 100%;
+    padding:50px 0;
     img{
         width: 100%;
+        display: block;
     }
+    /* コメント部分（Before） */
+    .comment_before{
+        position: absolute;
+        top: -50px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+        gap: 11px;
+        display: flex;
+        align-items: center;
+        width:360px;
+        img{
+            width: 70px;
+            height: 100px;
+        }
+        p{
+            padding: 9px 10px;
+            background-color: #fff;
+            border:1px solid var(--bg-brown);
+            border-radius: 8px;
+            font-size: 1.2rem;
+        }
+    }
+    /* コメント部分（After） */
+    .comment_after{
+        position: absolute;
+        bottom: -47px;
+        transform:none;
+        right: 8px;
+        left: auto;
 
+        z-index: 2;
+        gap: 11px;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        width:360px;
+        img{
+            width: 70px;
+            height: 100px;
+            object-fit: contain;
+        }
+        p{
+            padding: 9px 10px;
+            background-color: #fff;
+            border:1px solid var(--bg-brown);
+            border-radius: 8px;
+            font-size: 1.17rem;
+        }
+    }
     /*   アニメーション下   */
     .scrollIn{
         opacity: 0;
     }
     .bottomIn{
         animation: slideIn 1s forwards;
-        animation-delay: .3s;
+        animation-delay: 0.3s;
     }
 
     /*   アニメーション左   */
@@ -362,7 +414,7 @@ li{
     }
     .link{
         position: absolute;
-        bottom: 90px;
+        bottom: 30px;
         left: 10px;
         width: 85px;
     }
