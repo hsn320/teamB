@@ -1,8 +1,16 @@
 :root {
+    /* 色 */
     --bg-beige: #FAF7EF;
     --bg-brown: #B9885A;
     --color-darkBrown: #5A5048;
     --bg-title: #D4C4A5;
+
+    /* 文字 */
+    --Title: 3.2rem;
+    --TitleTxt: 2.4rem;
+    --SubTitle: 2rem;
+    --Txt: 1.6rem;
+    --DetailTxt: 1.2rem;
 }
 html{
     font-size: 62.5%;
@@ -39,7 +47,7 @@ li{
         top: 70%;
         left: calc(50% + 215px + 150px);
         transform: translateY(-50%);
-        font-size: 1.6rem;
+        font-size: var(--Txt);
         .lineupTitle{
             padding-bottom: 20px;
         }
@@ -155,7 +163,7 @@ li{
 .drawer-nav-item {
     padding: 20px 40px;
     text-align: right;
-    font-size: 1.8rem;
+    font-size: var(--SubTitle);
     position: relative;
 }
 .drawer-nav-item::after {
@@ -181,7 +189,7 @@ li{
     background: none;
     border: none;
     padding: 0;
-    font-size: 1.8rem;
+    font-size: var(--SubTitle);
     color: #333;
     cursor: pointer;
     display: inline-flex;
@@ -210,7 +218,7 @@ li{
 
 .language-option {
     padding: 15px 0 0;
-    font-size: 16px;
+    font-size: var(--Txt);
     color: #000;
     cursor: pointer;
 }
@@ -263,19 +271,27 @@ li{
 }
 
 #svgMask{
-    width: 80%;
+    width: 85%;
     transform: rotate(-5deg);
+}
+.st0 {
+    fill: none;
 }
 #mainTxt {
     fill: none; 
     stroke: #ffffff; 
-    stroke-width: 29; 
+    stroke-width: 30;
     stroke-linecap: round; 
     stroke-linejoin: round; 
     stroke-dasharray: 2000; 
-    stroke-dashoffset: 2000; 
+    stroke-dashoffset: 1870; 
     shape-rendering: geometricPrecision;
-    animation: draw 8s ease forwards;
+
+    /* 日本ver */
+    /* animation: draw 7s ease forwards; */
+
+    /* 台湾ver */
+    animation: draw 5s ease forwards;
 }
 @keyframes draw {
     to {
@@ -311,10 +327,10 @@ li{
     flex-direction: column;
     padding-top: 80px;
     .subTitle{
-        font-size: 2rem;
+        font-size: var(--SubTitle);
     }
     .Title{
-        font-size: 3.2rem;
+        font-size: var(--Title);
     }
 }
 
@@ -444,12 +460,12 @@ li{
     padding-bottom: 20px;
     h2{
         margin-bottom: 5px;
-        font-size: 2.4rem;
+        font-size: var(--TitleTxt);
         font-weight: bold;
     }
     h3{
         margin-top: 0;
-        font-size: 1.8rem;
+        font-size: var(--SubTitle);
         font-weight: normal;
     }
 }
@@ -478,7 +494,7 @@ li{
         gap: 35px;
         background: var(--bg-title);
         height: 60px;
-        font-size: 2rem;
+        font-size: var(--SubTitle);
         font-weight: normal;
         margin: 0;
         white-space: nowrap;
@@ -499,7 +515,7 @@ li{
     p {
         text-align: left;
         color: var(--color-darkBrown);
-        font-size: 1.2rem;
+        font-size: var(--DetailTxt);
         line-height: 1.6;
         margin: 0;
         padding: 40px 30px;
@@ -529,7 +545,7 @@ li{
         height: 55px;
         background-color: var(--bg-brown);
         color: #fff;
-        font-size: 2rem;
+        font-size: var(--SubTitle);
     }
     .flowTitle::after {
         content: "";
@@ -547,7 +563,7 @@ li{
 /* scroll */
 .ScrollTitle{
     padding-top: 40px;
-    font-size: 2rem;
+    font-size: var(--SubTitle);
     text-align: center;
     padding-bottom: 20px;
 }
