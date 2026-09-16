@@ -1,135 +1,121 @@
 const testData = {
     "q1" : {
         number: "Q.01",
-        text: "部屋を模様替えするなら、<br>シンプルで落ち着く空間より、<br>個性が光るおしゃれな空間にしたい？",
-        nextYes: "q2",
-        nextNo: "q3"
+        text: "時代を超えた「レトロ・歴史感」に惹かれますか？",
+        nextYes: "q2-a",
+        nextNo: "q2-b"
     },
-    "q2" : {
+    "q2-a" : {
         number: "Q.02",
-        text: "自分の性格は「クールで現実的」よりも、<br>「感性豊かでロマンチスト」だと思う？",
-        nextYes: "q4",
-        nextNo: "q5"
+        text: "「人と被らないこだわり」を<br>アピールするのが好き？",
+        nextYes: "q3-a",
+        nextNo: "q3-b"
     },
-    "q3" : {
+    "q2-b" : {
+        number: "Q.02",
+        text: "人間関係や買い物では<br>「親しみやすさ・居心地」が最優先？",
+        nextYes: "q3-c",
+        nextNo: "q3-d"
+    },
+    "q3-a" : {
         number: "Q.03",
-        text: "人から言われて嬉しいのは<br>「個性的だね」よりも「優しいね」だ。",
-        nextYes: "q6",
-        nextNo: "q7"
+        text: "感情表現が豊かで、<br>自分の「好き」を情熱的に伝えたい？",
+        nextYes: "q4-a",
+        nextNo: "q4-b"
     },
-    "q4" : {
+    "q3-b" : {
+        number: "Q.03",
+        text: "大勢より、静かで落ち着いた<br>一人（少人数）時間を優先したい？",
+        nextYes: "q4-c",
+        nextNo: "q4-d"
+    },
+    "q3-c" : {
+        number: "Q.03",
+        text: "トラブルがあっても<br>「まあいっか」と流せるポジティブ派？",
+        nextYes: "q4-e",
+        nextNo: "q4-f"
+    },
+    "q3-d" : {
+        number: "Q.03",
+        text: "「自然体の自分」やシンプルで<br>無駄のない暮らしが好き？",
+        nextYes: "q4-g",
+        nextNo: "q4-h"
+    },
+    "q4-a" : {
         number: "Q.04",
-        text: "直感やひらめきを信じて行動するよりも、<br>計画を立てて進める方が得意？",
+        text: "ミステリアスな世界観に惹かれる？",
         nextYes: "r1",
-        nextNo: "q12"
+        nextNo: "r2"
     },
-    "q5" : {
-        number: "Q.05",
-        text: "モノを選ぶとき、使いやすさよりも、<br>見た目の可愛さやトキメキを重視する？",
-        nextYes: "q13",
-        nextNo: "q14"
-    },
-    "q5.5" : {
-        number: "Q.05",
-        text: "モノを選ぶとき、使いやすさよりも、<br>見た目の可愛さやトキメキを重視する？",
+    "q4-b" : {
+        number: "Q.04",
+        text: "「発想が個性的」「おもしろい」とよく言われる？",
         nextYes: "r3",
         nextNo: "r4"
     },
-    "q6" : {
-        number: "Q.06",
-        text: "休日を過ごすなら、賑やかな場所よりも、<br>落ち着いた場所に行きたい？",
-        nextYes: "q15",
-        nextNo: "q16"
-    },
-    "q6.5" : {
-        number: "Q.06",
-        text: "休日を過ごすなら、賑やかな場所よりも、<br>落ち着いた場所に行きたい？",
-        nextYes: "r19",
-        nextNo: "r20"
-    },
-    "q7" : {
-        number: "Q.07",
-        text: "みんなを引っ張るリーダータイプよりも、<br>みんなを癒やすサポートタイプだと思う？",
-        nextYes: "q10",
-        nextNo: "q11"
-    },
-    "q8" : {
-        number: "Q.08",
-        text: "人付き合いは、<br>広く浅くたくさんの人とワイワイ楽しむよりも、<br>狭く深く特定の親しい人と過ごす方が好き？",
-        nextYes: "q9",
-        nextNo: "q6.5"
-    },
-    "q9" : {
-        number: "Q.09",
-        text: "自分のこだわりや世界観をしっかり持っていて、<br>簡単には妥協したくない方だ。",
-        nextYes: "r17",
-        nextNo: "r18"
-    },
-    "q10" : {
-        number: "Q.10",
-        text: "「洗練された都会的なデザイン」よりも、<br>「自然のぬくもりや手作り感」に惹かれる方だ.",
-        nextYes: "r13",
-        nextNo: "q17"
-    },
-    "q11" : {
-        number: "Q.11",
-        text: "周りから「しっかり者で大人っぽい」よりも、<br>「愛嬌があって親しみやすい」と<br>言われることが多い？",
-        nextYes: "r16",
-        nextNo: "q8"
-    },
-    "q12" : {
-        number: "Q.12",
-        text: "新しいゲームを始めるとき、<br>ルール通りに遊ぶより、縛りプレイなど<br>自分なりの面白い遊び方を見つけるのが好き？",
-        nextYes: "r2",
-        nextNo: "q5.5"
-    },
-    "q13" : {
-        number: "Q.13",
-        text: "ファッションや持ち物には、<br>どこかに「懐かしさ」や「アンティーク」の要素を取り入れたい？",
+    "q4-c" : {
+        number: "Q.04",
+        text: "ものごとを深く考えてしまう？",
         nextYes: "r5",
         nextNo: "r6"
     },
-    "q14" : {
-        number: "Q.14",
-        text: "賑やかでカラフルなものに囲まれていると、<br>テンションが上がってワクワクする",
+    "q4-d" : {
+        number: "Q.04",
+        text: "こだわりが強く、<br>礼儀や伝統的な価値観を重んじる？",
         nextYes: "r7",
-        nextNo: "r8"
+        // nextNo: "r8"
     },
-    "q15" : {
-        number: "Q.15",
-        text: "完璧主義で、<br>細かい部分まで整っていないと気が済まない。",
+    "q4-e" : {
+        number: "Q.04",
+        text: "周りを楽しませたり、<br>居心地よい場を作るのが得意？",
         nextYes: "r9",
         nextNo: "r10"
     },
-    "q16" : {
-        number: "Q.16",
-        text: "誰かと会話するとき、深い話を熱く語り合う<br>ような時間が好き。",
+    "q4-f" : {
+        number: "Q.04",
+        text: "困っている人がいると放っておけない？",
         nextYes: "r11",
         nextNo: "r12"
     },
-    "q17" : {
-        number: "Q.17",
-        text: "カフェを選ぶなら、<br>スタイリッシュな最新カフェよりも、<br>どこかホッとするような「おうち感」の<br>あるカフェが良い？",
-        nextYes: "r14",
-        nextNo: "r15"
+    "q4-g" : {
+        number: "Q.04",
+        text: "飾らない素の自分で<br>付き合える関係を大切にしたい？",
+        nextYes: "r13",
+        nextNo: "r14"
+    },
+    "q4-h" : {
+        number: "Q.04",
+        text: "目標に向かって無駄なく、効率的に進むのが得意？",
+        nextYes: "r15",
+        nextNo: "r16"
     },
 
     "r1" : {
         type: "result",
-        title: "パズル",
-        link: "https://www.sticker-film.com/tile/puzzle.html",
-        MainImage: "img/PuzzleYellow.png",
+        title: "マジョリカ",
+        link: "https://colorstw.com/tile/majolica",
+        MainImage: "img/MajolicaBlue.png",
         colors: [
-            { code: "#000", img:"img/PuzzleBlack.png"},
-            { code: "#B4B5B3", img:"img/PuzzleGray.png"},
-            { code: "#fff", img:"img/PuzzleWhite.png"},
-            { code: "#F4EEA4", img:"img/PuzzleYellow.png"},
-            { code: "#FFD7D1", img:"img/PuzzlePink.png"},
-            { code: "#B8D9EE", img:"img/PuzzlecBlue.png"},
+            { code: "#FCF3D9", img:"img/MajolicaWhite.png"},
+            { code: "#4A6280", img:"img/MajolicaGray.png"},
+            { code: "#1C59BA", img:"img/MajolicaBlue.png"},
+            { code: "#0A055A", img:"img/MajolicaPurple.png"},
         ],
-        text: "<span class='answer-Sub-Title'>ひらめきと遊び心のクリエイター</span><br> 自由な発想と高い行動力を持つあなた。パズルがピタッとハマるようなウキウキ感を日常で見つけられる人です。遊びゴコロ溢れる個性派な性格にぴったり！"
+        text: "<span class='answer-Sub-Title'>こだわり派の芸術家</span><br> ミステリアスで個性的なオーラを持つ人。どこかエキゾチックで他にはないセンスがあり、自分だけの世界観やスタイルを貫く美学の持ち主。"
     },
     "r2" : {
+        type: "result",
+        title: "ミックス金平糖",
+        link: "https://colorstw.com/tile/konpeitou",
+        MainImage: "img/konpeitouGreen.png",
+        colors: [
+            { code: "#ECC0C9", img:"img/konpeitouPink.png"},
+            { code: "#C5DA9A", img:"img/konpeitouGreen.png"},
+            { code: "#769BB8", img:"img/konpeitouBlue.png"},
+        ],
+        text: "<span class='answer-Sub-Title'>華やかで繊細なこだわり屋</span><br> パッと見は綺麗で華やかだが、実はとても繊細な感覚の持ち主。自分の「好き・嫌い」がハッキリしていて、妥協しないこだわりを持つ。"
+    },
+    "r3" : {
         type: "result",
         title: "さんかく",
         link: "https://colorstw.com/tile/sankaku",
@@ -141,22 +127,7 @@ const testData = {
             { code: "#977FA6", img:"img/SankakuPurple.png"},
             { code: "#94C1D1", img:"img/SankakuBlue.png"},
         ],
-        text: "<span class='answer-Sub-Title'>センスが光る！空間のアクセント</span><br> 直感と感性を大切にし、自分らしさを表現するのが得意なあなた。組み合わせでガラリと表情を変えるさんかくのように、周囲に新鮮な風を吹き込むハイセンスな個性にぴったりです。"
-    },
-    "r3" : {
-        type: "result",
-        title: "マカロン",
-        link: "https://colorstw.com/tile/macaron",
-        MainImage: "img/MacaronPink.png",
-        colors: [
-            { code: "#fff", img:"img/MacaronWhite.png"},
-            { code: "#FCF6C3", img:"img/MacaronYellow.png"},
-            { code: "#C5EEBD", img:"img/MacaronGreen.png"},
-            { code: "#F7C7B1", img:"img/MacaronPink.png"},
-            { code: "#8DC6EA", img:"img/MacaronSkyblue.png"},
-            { code: "#282E84", img:"img/MacaronBlue.png"},
-        ],
-        text: "<span class='answer-Sub-Title'>みんなを笑顔にする愛されキャラ</span><br> 可愛いものに目がなく、周囲をハッピーにする魅力を持ったあなた。コロンとしたフォルムと優しい色のマカロンは、場をパッと明るくするあなたの愛らしさにぴったりです。"
+        text: "<span class='answer-Sub-Title'>新しい風を吹き込むムードメーカー</span><br> 枠にとらわれない発想力とアクセントになる存在感を持つ人。周囲に刺激や変化を与え、空間やグループの雰囲気を一気に明るくする"
     },
     "r4" : {
         type: "result",
@@ -173,87 +144,9 @@ const testData = {
             { code: "#A5B0B3", img:"img/LanternIndigo.png"},
             { code: "#C7C3B0", img:"img/LanternGreen.png"},
         ],
-        text: "<span class='answer-Sub-Title'>トレンドをキャッチするおしゃれさん</span><br> 自分の好みがハッキリしていて、華やかなものが大好きなあなた。インテリアの主役として大人気のランタンは、洗練されたこだわりを持つ華のある性格にぴったりです。"
+        text: "<span class='answer-Sub-Title'>愛嬌たっぷりの、愛され人気者</span><br> いるだけで場がなごむ、親しみやすさと愛嬌の持ち主。自然と人が集まってくる魅力があり、周りから可愛がられる人気者タイプ。"
     },
     "r5" : {
-        type: "result",
-        title: "マジョリカ",
-        link: "https://colorstw.com/tile/majolica",
-        MainImage: "img/MajolicaBlue.png",
-        colors: [
-            { code: "#FCF3D9", img:"img/MajolicaWhite.png"},
-            { code: "#4A6280", img:"img/MajolicaGray.png"},
-            { code: "#1C59BA", img:"img/MajolicaBlue.png"},
-            { code: "#0A055A", img:"img/MajolicaPurple.png"},
-        ],
-        text: "<span class='answer-Sub-Title'>唯一無二の世界観を持つロマンチスト</span><br> 歴史や異国の雰囲気に惹かれる、豊かな感性を持つあなた。一味違った空間を演出するマジョリカは、他の人と被らない、あなただけの深いこだわりと世界観にぴったりです。"
-    },
-    "r6" : {
-        type: "result",
-        title: "ガレット",
-        link: "https://www.sticker-film.com/mosaictile/garret.html",
-        MainImage: "img/GarretGreen.png",
-        colors: [
-            { code: "#F5F6EF", img:"img/GarretWhite.png"},
-            // { code: "#181818", img:"img/GarretBlack.png"},
-            // { code: "#5E2F1D", img:"img/GarretBrown.png"},
-            // { code: "#0C0201", img:"img/GarretDeep.png"},
-            { code: "#073723", img:"img/GarretGreen.png"},
-            { code: "#140C35", img:"img/GarretBlue.png"},
-        ],
-        text: "<span class='answer-Sub-Title'>スマートで洗練されたモダン派</span><br> 無駄を好まず、スタイリッシュで上質なものを愛するあなた。空間をキリッと引き締めるモダンなガレットは、周囲から一目置かれるあなたのスマートさにぴったりです。"
-    },
-    "r7" : {
-        type: "result",
-        title: "ドロップス",
-        link: "https://www.sticker-film.com/mosaictile/drops.html",
-        MainImage: "img/DropsOlive.png",
-        colors: [
-            { code: "#9AA2BE", img:"img/DropSesame.png"},
-            { code: "#DF9098", img:"img/DropsSakura.png"},
-            { code: "#8DA793", img:"img/DropsOlive.png"},
-            { code: "#B0ADB2", img:"img/DropsRate.png"},
-        ],
-        text: "<span class='answer-Sub-Title'>エネルギー全開のポジティブスター</span><br> 賑やかな場所が大好きで、常にワクワクを探しているエネルギー溢れるあなた。カラフルなドロップスは、周りの人まで笑顔にする太陽のような明るさにぴったりです。"
-    },
-    "r8" : {
-        type: "result",
-        title: "マンハッタン",
-        link: "https://colorstw.com/tile/doughnut",
-        MainImage: "img/DoughnutBlue.png",
-        colors: [
-            { code: "#EBEBEC", img:"img/DoughnutWhite.png"},
-            { code: "#6FA4A1", img:"img/DoughnutGreen.png"},
-            { code: "#71A1B4", img:"img/DoughnutBlue.png"},
-            { code: "#DDE7F4", img:"img/DoughnutIndigo.png"},
-        ],
-        text: "<span class='answer-Sub-Title'>都会的で一歩先を行くトレンドセッター</span><br> 新しいものに敏感で、常に一歩先のおしゃれを楽しんでいるあなた。都会的でハイセンスなマンハッタンドーナッツは、洗練されたカッコよさを持つあなたにぴったりです。"
-    },
-    "r9" : {
-        type: "result",
-        title: "ミックス金平糖",
-        link: "https://colorstw.com/tile/konpeitou",
-        MainImage: "img/konpeitouGreen.png",
-        colors: [
-            { code: "#ECC0C9", img:"img/konpeitouPink.png"},
-            { code: "#C5DA9A", img:"img/konpeitouGreen.png"},
-            { code: "#769BB8", img:"img/konpeitouBlue.png"},
-        ],
-        text: "<span class='answer-Sub-Title'>美意識の高い、こだわり完璧主義者</span><br> 物事を深く見極める目を持っており、妥協を許さない綺麗好きなあなた。きらきらと繊細で気高い雰囲気を持つミックス金平糖は、自分の美学を貫く凛とした性格にぴったりです。"
-    },
-    "r10" : {
-        type: "result",
-        title: "ミックス大正カフェ",
-        link: "https://www.sticker-film.com/mosaictile/lmmix.html",
-        MainImage: "img/lmmixMonburan.png",
-        colors: [
-            { code: "#B2A386", img:"img/lmmixMonburan.png"},
-            { code: "#5A4638", img:"img/lmmixCastella.png"},
-            { code: "#B6A8A7", img:"img/lmmixMilk.png"},
-        ],
-        text: "<span class='answer-Sub-Title'>ノスタルジックを愛する<br> 物静かなインテリ</span><br> 静かに流れる時間や、歴史の深みを好むあなた。柔らかさの中に和の趣を感じさせるミックス大正カフェは、周囲に安心感を与えるあなたの知的で落ち着いた雰囲気にぴったりです"
-    },
-    "r11" : {
         type: "result",
         title: "大正カフェ",
         link: "https://colorstw.com/tile/taisyoucafe",
@@ -265,9 +158,22 @@ const testData = {
             { code: "#949DAC", img:"img/TaisyouGray.png"},
             { code: "#CBBEBE", img:"img/TaisyouPink.png"},
         ],
-        text: "<span class='answer-Sub-Title'>上品で懐の深い、おもてなしの達人</span><br> 誰に対しても丁寧で、レトロで落ち着きのある上品な雰囲気をまとったあなた。お洒落でありながらホッとする大正カフェは、あなたの柔らかい物腰と丁寧な暮らしぶりにぴったりです。"
+        text: "<span class='answer-Sub-Title'>穏やかで品のあるレトロ癒やし系</span><br>柔らかい物腰とゆったりした落ち着きを持つ人。どこか懐かしく上品な雰囲気をまとい、一緒にいる人に深い安心感を与える。"
     },
-    "r12" : {
+    "r6" : {
+        type: "result",
+        title: "フラン",
+        link: "https://colorstw.com/tile/fran",
+        MainImage: "img/FranGray.png",
+        colors: [
+            { code: "#B3ADA2", img:"img/FranWhite.png"},
+            { code: "#69696B", img:"img/FranGray.png"},
+            { code: "#B5A189", img:"img/FranBeige.png"},
+            { code: "#998C83", img:"img/FranBrown.png"},
+        ],
+        text: "<span class='answer-Sub-Title'>周りをやさしく包む、平和主義者</span><br> 争いごとを嫌い、誰に対しても温かく穏やかに接する人。でしゃばらず控えめだが、周囲をやさしく包み込む懐の深さがある。"
+    },
+    "r7" : {
         type: "result",
         title: "レンガ",
         link: "https://colorstw.com/tile/renga",
@@ -275,20 +181,25 @@ const testData = {
         colors: [
             { code: "#AD7B74", img:"img/RengaBeige.png"},
             { code: "#CEB493", img:"img/RengaBrown.png"},
+
         ],
-        text: "<span class='answer-Sub-Title'>ブレない芯を持つ、頼れる実力派</span><br> 自然体でありながら、どっしりとした安定感と高い信頼性を誇るあなた。時が経つほどに味が出るレンガは、時間をかけて大きな成果を積み上げていく誠実な強さにぴったりです。"
+        text: "<span class='answer-Sub-Title'>信念を貫く、頼れる重厚リーダー</span><br> ぶれない芯の強さと責任感を持つ人。本質や価値観を大切にし、どんな時もブレずに周りを引っぱっていく確かな信頼感の持ち主。"
     },
-    "r13" : {
-        type: "result",
-        title: "ハルカラット",
-        link: "https://colorstw.com/tile/harukaratto",
-        MainImage: "img/harukaratto.png",
-        colors: [
-            { code: "#EDE1D8", img:"img/harukaratto.png"},
-        ],
-        text: "<span class='answer-Sub-Title'>自然体でみんなを包み込む <br> 癒やしの存在</span><br> 背伸びをせず、ありのままの自分で周囲を優しく包み込めるあなた。温かみのある漆喰風のハルカラットは、そこに居るだけで場を和ませるナチュラルな魅力にぴったりです。"
-    },
-    "r14" : {
+    // "r8" : {
+    //     type: "result",
+    //     title: "ジェラート",(パンナコッタ)
+    //     link: "https://www.sticker-film.com/mosaictile/gelato.html",
+    //     MainImage: "img/GelatoWhite.png",
+    //     colors: [
+    //         { code: "#DDDCDA", img:"img/GelatoWhite.png"},
+    //         { code: "#B7B3B2", img:"img/GelatoGray.png"},
+    //         { code: "#D7D5C8", img:"img/GelatoBeige.png"},
+    //         { code: "#A9B5AC", img:"img/GelatoMint.png"},
+    //         { code: "#60554B", img:"img/GelatoBrown.png"},
+    //     ],
+    //     text: "<span class='answer-Sub-Title'>スマートで品格ある、上品タイプ</span><br> 凛とした佇まいと洗練されたマナーを持つ人。高貴で上品な印象を与えつつも、スマートな立ち振る舞いで周囲を魅了する。"
+    // },
+    "r9" : {
         type: "result",
         title: "ベルゲンワッフル",
         link: "https://colorstw.com/tile/bergenwaffles",
@@ -297,27 +208,23 @@ const testData = {
             { code: "#C0AD9F", img:"img/BergenwafflesBrown.png"},
             { code: "#E9E9E7", img:"img/BergenwafflesWhite.png"},
         ],
-        text: "<span class='answer-Sub-Title'>アットホームで聞き上手な愛され役</span><br> おうちのようにリラックスできる空間を好むあなた。可愛らしいカフェ風を演出するベンゲルワッフルは、誰からも「親しみやすい」と好かれる温厚な人柄にぴったりです。"
+        text: "<span class='answer-Sub-Title'>笑顔を絶やさない<br>気さくなムードメーカー</span><br> 丸みのある親しみやすさと温かい雰囲気を持つ人。カフェのように居心地の良い空気を作り出し、みんなを自然と笑顔にする。"
     },
-    "r15" : {
+    "r10" : {
         type: "result",
-        title: "カプリ",
-        link: "https://www.sticker-film.com/mosaictile/capuri.html",
-        MainImage: "img/CapuriYellow.png",
+        title: "マンハッタンドーナツ",
+        link: "https://colorstw.com/tile/doughnut",
+        MainImage: "img/DoughnutBlue.png",
         colors: [
-            { code: "#281054", img:"img/CaouriPurple.png"},
-            { code: "#E197A6", img:"img/CapuriPink.png"},
-            { code: "#37552F", img:"img/CapuriGreen.png"},
-            { code: "#074753", img:"img/CapuriNavy.png"},
-            { code: "#CE811A", img:"img/CapuriOrenge.png"},
-            { code: "#F2EF69", img:"img/CapuriYellow.png"},
-            { code: "#000", img:"img/CapuriBlack.png"},
-            { code: "#B02511", img:"img/CapuriRed.png"},
-            { code: "#fff", img:"img/CapuriWhite.png"},
+            { code: "#EBEBEC", img:"img/DoughnutWhite.png"},
+            { code: "#6FA4A1", img:"img/DoughnutGreen.png"},
+            { code: "#71A1B4", img:"img/DoughnutBlue.png"},
+            { code: "#DDE7F4", img:"img/DoughnutIndigo.png"},
+
         ],
-        text: "<span class='answer-Sub-Title'>気取らない、軽やかで自由なスピリット</span><br> フットワークが軽く、カジュアルで気さくな雰囲気を持つあなた。肩の力が抜けたリラックス感のあるカプリは、誰とでもすぐに打ち解けられるフレンドリーな魅力にぴったりです。"
+        text: "<span class='answer-Sub-Title'>トレンドに敏感な、センス抜群の都会派</span><br> おしゃれで都会的なセンスに溢れた人。流行やワクワクすることに敏捷で、自分のライフスタイルをスマート楽しむスタイル派。"
     },
-    "r16" : {
+    "r11" : {
         type: "result",
         title: "ピュレ",
         link: "https://colorstw.com/tile/puree",
@@ -330,36 +237,49 @@ const testData = {
             { code: "#C7A7A4", img:"img/PureePink.png"},
             { code: "#4A5161", img:"img/PureeBlack.png"},
         ],
-        text: "<span class='answer-Sub-Title'>ふんわり優しい、みんなのオアシス</span><br> 争いごとが苦手で、常に周りの人の気持ちに寄り添える優しいあなた。もこもこした癒やし系のピュレは、トゲトゲした心を丸くしてしまう圧倒的な包容力にぴったりです。"
+        text: "<span class='answer-Sub-Title'>包容力抜群の、ほっこり癒やし担当</span><br> もこもことした温もりを感じさせる、優しい包容力の持ち主。困っている人を放っておけず、周囲をホッと安心させる癒やしの存在。"
     },
-    "r17" : {
+    "r12" : {
         type: "result",
-        title: "ジェラート",
-        link: "https://www.sticker-film.com/mosaictile/gelato.html",
-        MainImage: "img/GelatoWhite.png",
+        title: "マカロン",
+        link: "https://colorstw.com/tile/macaron",
+        MainImage: "img/MacaronPink.png",
         colors: [
-            { code: "#DDDCDA", img:"img/GelatoWhite.png"},
-            { code: "#B7B3B2", img:"img/GelatoGray.png"},
-            { code: "#D7D5C8", img:"img/GelatoBeige.png"},
-            { code: "#A9B5AC", img:"img/GelatoMint.png"},
-            { code: "#60554B", img:"img/GelatoBrown.png"},
+            { code: "#fff", img:"img/MacaronWhite.png"},
+            { code: "#FCF6C3", img:"img/MacaronYellow.png"},
+            { code: "#C5EEBD", img:"img/MacaronGreen.png"},
+            { code: "#F7C7B1", img:"img/MacaronPink.png"},
+            { code: "#8DC6EA", img:"img/MacaronSkyblue.png"},
+            { code: "#282E84", img:"img/MacaronBlue.png"},
         ],
-        text: "<span class='answer-Sub-Title'>気品あふれる、憧れのエレガント</span><br> どこか品があり、自分の世界を大切にしながらスマートに行動できるあなた。上品さと高貴さを兼ね備えたジェラートは、周囲に媚びず、凛と伫む美しい価値観にぴったりです。"
+        text: "<span class='answer-Sub-Title'>素直でキュートな、愛されキャラ</span><br> 素直で無邪気な可愛らしさを持つ人。感情表現が豊かで素直なため、周囲から「放っておけない」と可愛がられる魅力にあふれる。"
     },
-    "r18" : {
+    "r13" : {
         type: "result",
-        title: "フラン",
-        link: "https://colorstw.com/tile/fran",
-        MainImage: "img/FranGray.png",
+        title: "ハルカラット",
+        link: "https://colorstw.com/tile/harukaratto",
+        MainImage: "img/harukaratto.png",
         colors: [
-            { code: "#B3ADA2", img:"img/FranWhite.png"},
-            { code: "#69696B", img:"img/FranGray.png"},
-            { code: "#B5A189", img:"img/FranBeige.png"},
-            { code: "#998C83", img:"img/FranBrown.png"},
+            { code: "#EDE1D8", img:"img/harukaratto.png"},
         ],
-        text: "<span class='answer-Sub-Title'>誰からも信頼される、心優しい優等生</span><br> 真面目で思いやりがあり、周囲のバランスをいつも考えて行動できるあなた。確かな安心感を与えるやさしい印象のフランは、みんなをそっと支える誠実な優しさにぴったりです。"
+        text: "<span class='answer-Sub-Title'>ありのままを愛する、ナチュラル派</span><br> 飾り気がなく、温かみのある素直な人。自然体で裏表がなく、人間味あふれる人柄で周りを安心させる。"
     },
-    "r19" : {
+    "r14" : {
+        type: "result",
+        title: "ガレット",
+        link: "https://www.sticker-film.com/mosaictile/garret.html",
+        MainImage: "img/GarretGreen.png",
+        colors: [
+            { code: "#F5F6EF", img:"img/GarretWhite.png"},
+            { code: "#181818", img:"img/GarretBlack.png"},
+            { code: "#5E2F1D", img:"img/GarretBrown.png"},
+            { code: "#0C0201", img:"img/GarretDeep.png"},
+            { code: "#073723", img:"img/GarretGreen.png"},
+            { code: "#140C35", img:"img/GarretBlue.png"},
+        ],
+        text: "<span class='answer-Sub-Title'>洗練された上質さを好む、大人タイプ</span><br> 自然体でありながら、どこかモダンで上品なセンスを持つ人。派手に主張しなくても自然と滲み出る、洗練された大人な雰囲気の持ち主。"
+    },
+    "r15" : {
         type: "result",
         title: "トルテ",
         link: "https://colorstw.com/tile/torte",
@@ -369,30 +289,20 @@ const testData = {
             { code: "#EFF0F1", img:"img/TorteGloss.png"},
             { code: "#2D2E33", img:"img/TorteBlack.png"},
         ],
-        text: "<span class='answer-Sub-Title'>洗練された大人の気品漂うロジカル派</span><br> 物事を論理的に捉え、静かで落ち着いた空間を好む大人っぽいあなた。モダンで高貴な印象のトルテは、無駄な主張をせずとも自然と上品さが滲み出るクールな佇まいにぴったりです。"
+        text: "<span class='answer-Sub-Title'>論理的でスマートな、しっかり者</span><br> 無駄がなく洗練された現代的な思考の持ち主。目標に向かって効率よくスマートに行動し、何事もテキパキこなす頼もしさがある。"
     },
-    "r20" : {
+    "r16" : {
         type: "result",
-        title: "しかく",
-        link: "https://www.sticker-film.com/tile/sikaku.html",
-        MainImage: "img/SikakuGreen.png",
+        title: "ドロップス",
+        link: "https://www.sticker-film.com/mosaictile/drops.html",
+        MainImage: "img/DropsOlive.png",
         colors: [
-            { code: "#EBEBEB", img:"img/SikakuWhite.png"},
-            { code: "#000", img:"img/SikakuBlack.png"},
-            { code: "#F1E4DE", img:"img/SikakuIvory.png"},
-            { code: "#C6CACE", img:"img/SikakuGray.png"},
-            { code: "#DFC8B6", img:"img/SikakuBeige.png"},
-            { code: "#BFD3BC", img:"img/SikakuYellowgreen.png"},
-            { code: "#C3EDF3", img:"img/SikakuSkyblue.png"},
-            { code: "#C9BED4", img:"img/SikakuPurple.png"},
-            { code: "#FCD9E1", img:"img/SikakuPink.png"},
-            { code: "#9B806F", img:"img/SikakuBrown.png"},
-            { code: "#CD8B87", img:"img/SikakuDarkpink.png"},
-            { code: "#9BC38E", img:"img/SikakuGreen.png"},
-            { code: "#65BEBE", img:"img/SikakuTurquoise.png"},
-            { code: "#68445A", img:"img/SikakuDarkpurple.png"},
+            { code: "#9AA2BE", img:"img/DropSesame.png"},
+            { code: "#DF9098", img:"img/DropsSakura.png"},
+            { code: "#8DA793", img:"img/DropsOlive.png"},
+            { code: "#B0ADB2", img:"img/DropsRate.png"},
         ],
-        text: "<span class='answer-Sub-Title'>シンプル・イズ・ベスト! 信頼度No.1</span><br> 飾らない性格で、実用性や安定感を何よりも大切にするあなた。どんな空間にも馴染むしかくは、「この人に任せれば安心」と誰もが太鼓判を押す実直な性格にぴったりです。"
+        text: "<span class='answer-Sub-Title'>自由奔放で遊び心あふれる、ポップ派</span><br> カラフルで明るいエネルギーに満ちた人。自由な発想と強い遊び心を持ち、毎日を自分らしくポップに楽しむ天才。"
     },
 }
 
@@ -465,7 +375,7 @@ function displayCurrentData() {
                 </div>
             </div>
             <div class="start-header">
-                <span class="header-icon right" onclick="openConfirmModal()">
+                <span class="header-icon right" onclick="confirmResetQuiz()">
                     <img src="img/reset.png" alt="閉じる">
                 </span>
             </div>
@@ -542,5 +452,5 @@ function closeConfirmModal() {
 }
 function confirmResetQuiz() {
     document.getElementById("confirmModal").style.display = "none";
-    window.location.href = "index.html"; 
+    window.location.href = "index.html#tileTest"; 
 }
