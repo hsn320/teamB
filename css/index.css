@@ -218,9 +218,15 @@ li{
 
 .language-option {
     padding: 15px 0 0;
-    font-size: var(--Txt);
+    font-size: var(--SubTitle);
     color: #000;
     cursor: pointer;
+    .language-option a {
+    color: #000;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    }
 }
 
 

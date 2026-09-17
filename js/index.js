@@ -108,10 +108,22 @@ document.addEventListener('click', (e) => {
     if (!drawer.contains(e.target) && !menuBtn.contains(e.target)) toggleMenu(false);
 });
 
-// 言語切替
+// トグルオープン
 langItem.addEventListener('click', (e) => {
     e.stopPropagation();
     langItem.classList.toggle('open');
+});
+// 言語切替
+const langOptions = document.querySelectorAll('.language-option');
+
+langOptions.forEach(option => {
+    option.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const targetHref = option.dataset.href;
+        if (targetHref) {
+            window.location.href = targetHref;
+        }
+    });
 });
 
 
