@@ -297,10 +297,10 @@ h2{
 }
 
 .modalTitle {
-    font-size: var(--Title);
+    font-size: var(--TitleTxt);
     font-weight: normal;
     color: #000;
-    margin: 0 0 25px 0;
+    margin: 0 0 20px 0;
 }
 .modalDesc {
     font-size: var(--Txt);
