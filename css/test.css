@@ -297,13 +297,13 @@ h2{
 }
 
 .modalTitle {
-    font-size: 2.8rem;
+    font-size: var(--Title);
     font-weight: normal;
     color: #000;
     margin: 0 0 25px 0;
 }
 .modalDesc {
-    font-size: 1.4rem;
+    font-size: var(--Txt);
     color: #333;
     margin: 0 0 45px 0;
 }
@@ -319,7 +319,7 @@ h2{
 .modalBtn {
     width: 120px;
     height: 46px;
-    font-size: 2rem;
+    font-size: var(--SubTitle);
     color: #fff;
     border-radius: 12px;
     border: none;
