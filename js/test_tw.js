@@ -162,18 +162,18 @@ const testData = {
         ],
         text: "<span class='answer-Sub-Title'>溫和且優雅的復古療癒系</span><br>擁有溫柔優雅的舉止與令人安心的沉穩感。散發著懷舊而高雅的氣息，給人深度的安心感。"
     },
+// 変更あり
     "r6" : {
         type: "result",
-        title: "布丁塔",
-        link: "https://colorstw.com/tile/fran",
-        MainImage: "img/FranGray.png",
+        title: "パンナコッタ",
+        link: "https://colorstw.com/tile/pannacotta",
+        MainImage: "img/GelatoWhite.png",
         colors: [
-            { code: "#B3ADA2", img:"img/FranWhite.png"},
-            { code: "#69696B", img:"img/FranGray.png"},
-            { code: "#B5A189", img:"img/FranBeige.png"},
-            { code: "#998C83", img:"img/FranBrown.png"},
+            { code: "#8cacaf", img:"img/GelatoWhite.png"},
+            { code: "#3465a7", img:"img/GelatoGray.png"},
+            { code: "#c49092", img:"img/GelatoBeige.png"},
         ],
-        text: "<span class='answer-Sub-Title'>溫柔包容一切的和平主義者</span><br> 討厭紛爭，對待任何人都能溫和沉穩。不愛張揚，卻擁有溫柔包容周圍一切的寬廣胸懷。"
+        text: "<span class='answer-Sub-Title'>擁有純淨美感與沉穩內涵的優雅者</span><br> 珍視自己的內心世界，不刻意包裝自我的透明感類型。在平靜沉穩的舉止中，蘊含著堅定不移的美感與冷艷高雅的格調。"
     },
     "r7" : {
         type: "result",
@@ -187,21 +187,19 @@ const testData = {
         ],
         text: "<span class='answer-Sub-Title'>貫徹信念的可靠沉穩領袖</span><br> 擁有堅定不移的強大信念與責任感。重視事物本質與價值觀，無論何時都不會動搖，引導著大家前進。"
     },
-    // 変更あり
-    // "r8" : {
-    //     type: "result",
-    //     title: "ジェラート",(パンナコッタ)
-    //     link: "https://www.sticker-film.com/mosaictile/gelato.html",
-    //     MainImage: "img/GelatoWhite.png",
-    //     colors: [
-    //         { code: "#DDDCDA", img:"img/GelatoWhite.png"},
-    //         { code: "#B7B3B2", img:"img/GelatoGray.png"},
-    //         { code: "#D7D5C8", img:"img/GelatoBeige.png"},
-    //         { code: "#A9B5AC", img:"img/GelatoMint.png"},
-    //         { code: "#60554B", img:"img/GelatoBrown.png"},
-    //     ],
-    //     text: "<span class='answer-Sub-Title'>俐落且具品格的高雅類型</span><br> 擁有優雅的姿態與洗鍊的禮儀。給人高貴優雅印象的同時，也能以俐落的舉止吸引周圍目光。"
-    // },
+    "r8" : {
+        type: "result",
+        title: "布丁塔",
+        link: "https://colorstw.com/tile/fran",
+        MainImage: "img/FranGray.png",
+        colors: [
+            { code: "#B3ADA2", img:"img/FranWhite.png"},
+            { code: "#69696B", img:"img/FranGray.png"},
+            { code: "#B5A189", img:"img/FranBeige.png"},
+            { code: "#998C83", img:"img/FranBrown.png"},
+        ],
+        text: "<span class='answer-Sub-Title'>溫柔包容一切的和平主義者</span><br> 討厭紛爭，對待任何人都能溫和沉穩。不愛張揚，卻擁有溫柔包容周圍一切的寬廣胸懷。"
+    },
     "r9" : {
         type: "result",
         title: "比利時鬆餅",

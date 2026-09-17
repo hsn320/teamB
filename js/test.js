@@ -63,7 +63,7 @@ const testData = {
         number: "Q.04",
         text: "こだわりが強く、<br>礼儀や伝統的な価値観を重んじる？",
         nextYes: "r7",
-        // nextNo: "r8"
+        nextNo: "r8"
     },
     "q4-e" : {
         number: "Q.04",
@@ -160,18 +160,18 @@ const testData = {
         ],
         text: "<span class='answer-Sub-Title'>穏やかで品のあるレトロ癒やし系</span><br>柔らかい物腰とゆったりした落ち着きを持つ人。どこか懐かしく上品な雰囲気をまとい、一緒にいる人に深い安心感を与える。"
     },
+// 変更あり
     "r6" : {
         type: "result",
-        title: "フラン",
-        link: "https://colorstw.com/tile/fran",
-        MainImage: "img/FranGray.png",
+        title: "パンナコッタ",
+        link: "https://colorstw.com/tile/pannacotta",
+        MainImage: "img/GelatoWhite.png",
         colors: [
-            { code: "#B3ADA2", img:"img/FranWhite.png"},
-            { code: "#69696B", img:"img/FranGray.png"},
-            { code: "#B5A189", img:"img/FranBeige.png"},
-            { code: "#998C83", img:"img/FranBrown.png"},
+            { code: "#8cacaf", img:"img/GelatoWhite.png"},
+            { code: "#3465a7", img:"img/GelatoGray.png"},
+            { code: "#c49092", img:"img/GelatoBeige.png"},
         ],
-        text: "<span class='answer-Sub-Title'>周りをやさしく包む、平和主義者</span><br> 争いごとを嫌い、誰に対しても温かく穏やかに接する人。でしゃばらず控えめだが、周囲をやさしく包み込む懐の深さがある。"
+        text: "<span class='answer-Sub-Title'>静かでピュアな美しさを持つ、<br>洗練された人</span><br> 自分の世界を大切にし、自分を飾らない透明感のある人。静かで落ち着いた立ち振る舞いの中に、芯のある美しさと凛とした品格を秘めている。"
     },
     "r7" : {
         type: "result",
@@ -185,21 +185,19 @@ const testData = {
         ],
         text: "<span class='answer-Sub-Title'>信念を貫く、頼れる重厚リーダー</span><br> ぶれない芯の強さと責任感を持つ人。本質や価値観を大切にし、どんな時もブレずに周りを引っぱっていく確かな信頼感の持ち主。"
     },
-    // 変更あり
-    // "r8" : {
-    //     type: "result",
-    //     title: "ジェラート",(パンナコッタ)
-    //     link: "https://www.sticker-film.com/mosaictile/gelato.html",
-    //     MainImage: "img/GelatoWhite.png",
-    //     colors: [
-    //         { code: "#DDDCDA", img:"img/GelatoWhite.png"},
-    //         { code: "#B7B3B2", img:"img/GelatoGray.png"},
-    //         { code: "#D7D5C8", img:"img/GelatoBeige.png"},
-    //         { code: "#A9B5AC", img:"img/GelatoMint.png"},
-    //         { code: "#60554B", img:"img/GelatoBrown.png"},
-    //     ],
-    //     text: "<span class='answer-Sub-Title'>スマートで品格ある、上品タイプ</span><br> 凛とした佇まいと洗練されたマナーを持つ人。高貴で上品な印象を与えつつも、スマートな立ち振る舞いで周囲を魅了する。"
-    // },
+    "r8" : {
+        type: "result",
+        title: "フラン",
+        link: "https://colorstw.com/tile/fran",
+        MainImage: "img/FranGray.png",
+        colors: [
+            { code: "#B3ADA2", img:"img/FranWhite.png"},
+            { code: "#69696B", img:"img/FranGray.png"},
+            { code: "#B5A189", img:"img/FranBeige.png"},
+            { code: "#998C83", img:"img/FranBrown.png"},
+        ],
+        text: "<span class='answer-Sub-Title'>周りをやさしく包む、平和主義者</span><br> 争いごとを嫌い、誰に対しても温かく穏やかに接する人。でしゃばらず控えめだが、周囲をやさしく包み込む懐の深さがある。"
+    },
     "r9" : {
         type: "result",
         title: "ベルゲンワッフル",
