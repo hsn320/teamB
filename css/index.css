@@ -288,10 +288,10 @@ li{
     shape-rendering: geometricPrecision;
 
     /* 日本ver */
-    /* animation: draw 7s ease forwards; */
+    animation: draw 7s ease forwards;
 
     /* 台湾ver */
-    animation: draw 5s ease forwards;
+    /* animation: draw 5s ease forwards; */
 }
 @keyframes draw {
     to {
