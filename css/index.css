@@ -11,6 +11,7 @@
     --SubTitle: 2rem;
     --Txt: 1.6rem;
     --DetailTxt: 1.2rem;
+    --MessageTxt: 1.1rem;
 }
 html{
     font-size: 62.5%;
@@ -368,7 +369,7 @@ li{
             background-color: #fff;
             border:1px solid var(--bg-brown);
             border-radius: 8px;
-            font-size: var(--DetailTxt);
+            font-size: var(--MessageTxt);
         }
     }
     /* コメント部分（After） */
@@ -395,7 +396,7 @@ li{
             background-color: #fff;
             border:1px solid var(--bg-brown);
             border-radius: 8px;
-            font-size: var(--DetailTxt);
+            font-size: var(--MessageTxt);
         }
     }
     /*   アニメーション下   */
