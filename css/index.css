@@ -199,6 +199,7 @@ li{
 }
 .arrow {
     width: 14px;
+    height: 14px;
     transition: transform 0.3s;
 }
 .language-item.open .arrow { 
@@ -310,12 +311,14 @@ li{
         top: 0;
         left: 0;
         width: 60%;
+        height: 100%;
     }
     .rti{
         position: absolute;
         top: 0;
         right: 0;
         width: 65%;
+        height: 100%;
     }
 }
 
@@ -402,6 +405,10 @@ li{
     /*   アニメーション下   */
     .scrollIn{
         opacity: 0;
+        .scrollImg{
+            width: 390px;
+            height: 300px;
+        }
     }
     .bottomIn{
         animation: slideIn 1s forwards;
@@ -418,6 +425,7 @@ li{
         bottom: 30px;
         left: 10px;
         width: 85px;
+        height: auto;
     }
 }
 .leftIn{
@@ -580,6 +588,7 @@ li{
     }
     img{
         width: 150px;
+        height: auto;
         flex-shrink: 0;
     }
 }
@@ -661,6 +670,10 @@ li{
     }
     .sideLeftWrap{
         opacity: 0;
+        img{
+            width: 120px;
+            height: auto;
+        }
     }
     .lside{
         width: 120px;
@@ -689,6 +702,7 @@ li{
 
     img{
         width: 100%;
+        height: 300px;
     }
     h2{
         font-size: var(--Title);
@@ -700,7 +714,7 @@ li{
         padding-top: 20px;
     }
     .btn{
-        margin-top: 18px;
+        margin-top: 20px;
         width: 150px;
         height: 50px;
         background: #D7D7D7;
@@ -864,6 +878,7 @@ li{
 }
 .footerLogo{
     width: 85px;
+    height: auto;
     padding: 30px 0 45px;
 }
 .snsWrap{
@@ -873,5 +888,6 @@ li{
     gap: 55px;
     .icon{
         width: 60px;
+        height: auto;
     }
 }
