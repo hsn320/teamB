@@ -84,6 +84,7 @@ items.forEach((items) =>
 const menuBtn = document.getElementById('menuBtn');
 const drawer = document.getElementById('drawer');
 const langItem = document.querySelector('.language-item');
+const navLinks = document.querySelectorAll('.drawer-nav-list a:not(.language-dropdown a)');
 
 // メニューの開閉状態をトグルする関数
 const toggleMenu = (force) => {
@@ -91,6 +92,13 @@ const toggleMenu = (force) => {
     drawer.classList.toggle('open', isOpen);
     menuBtn.classList.toggle('open', isOpen);
 };
+
+// ナビを押したら閉じる
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        toggleMenu(false);
+    });
+});
 
 // ハンバーガーボタンクリック
 menuBtn.addEventListener('click', () => toggleMenu());
@@ -133,6 +141,5 @@ scrollContainer.addEventListener('mouseenter', stopScroll);
 scrollContainer.addEventListener('mouseleave', startScroll);
 scrollContainer.addEventListener('touchstart', stopScroll);
 scrollContainer.addEventListener('touchend', startScroll);
-
 
 autoScrollLoop();
