@@ -64,7 +64,7 @@ const testData = {
         number: "Q.04",
         text: "你性格堅持講究，<br>並重視禮儀與傳統價值觀嗎？",
         nextYes: "r7",
-        // nextNo: "r8"
+        nextNo: "r8"
     },
     "q4-e" : {
         number: "Q.04",
@@ -80,8 +80,7 @@ const testData = {
     },
     "q4-g" : {
         number: "Q.04",
-        // 改行確認
-        text: "你重視能以不加修飾的真實自我來<br>相處的人際關係嗎？",
+        text: "你重視能以不加修飾的真實自我<br>來相處的人際關係嗎？",
         nextYes: "r13",
         nextNo: "r14"
     },
