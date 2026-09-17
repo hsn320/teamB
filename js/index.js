@@ -75,8 +75,8 @@ leftSideIn.forEach(object => {
     lside.observe(object);
 });
 
-items.forEach((items) => 
-    observer.observe(items)
+items.forEach((item) => 
+    observer.observe(item)
 );
 
 
