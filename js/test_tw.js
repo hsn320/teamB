@@ -162,16 +162,15 @@ const testData = {
         ],
         text: "<span class='answer-Sub-Title'>溫和且優雅的復古療癒系</span><br>擁有溫柔優雅的舉止與令人安心的沉穩感。散發著懷舊而高雅的氣息，給人深度的安心感。"
     },
-// 変更あり
     "r6" : {
         type: "result",
         title: "パンナコッタ",
         link: "https://colorstw.com/tile/pannacotta",
-        MainImage: "img/GelatoWhite.png",
+        MainImage: "img/PannaTurquoise.png",
         colors: [
-            { code: "#8cacaf", img:"img/GelatoWhite.png"},
-            { code: "#3465a7", img:"img/GelatoGray.png"},
-            { code: "#c49092", img:"img/GelatoBeige.png"},
+            { code: "#8cacaf", img:"img/PannaTurquoise.png"},
+            { code: "#3465a7", img:"img/PannaBlue.png"},
+            { code: "#c49092", img:"img/PannaPink.png"},
         ],
         text: "<span class='answer-Sub-Title'>擁有純淨美感與沉穩內涵的優雅者</span><br> 珍視自己的內心世界，不刻意包裝自我的透明感類型。在平靜沉穩的舉止中，蘊含著堅定不移的美感與冷艷高雅的格調。"
     },
@@ -183,7 +182,7 @@ const testData = {
         colors: [
             { code: "#AD7B74", img:"img/RengaBeige.png"},
             { code: "#CEB493", img:"img/RengaBrown.png"},
-
+            { code: "#ffffff", img:"img/RengaWhite.png"},
         ],
         text: "<span class='answer-Sub-Title'>貫徹信念的可靠沉穩領袖</span><br> 擁有堅定不移的強大信念與責任感。重視事物本質與價值觀，無論何時都不會動搖，引導著大家前進。"
     },
@@ -221,7 +220,7 @@ const testData = {
             { code: "#6FA4A1", img:"img/DoughnutGreen.png"},
             { code: "#71A1B4", img:"img/DoughnutBlue.png"},
             { code: "#DDE7F4", img:"img/DoughnutIndigo.png"},
-
+            { code: "#83898B", img:"img/DoughnutGray.png"},
         ],
         text: "<span class='answer-Sub-Title'>對趨勢敏銳的時尚都會派</span><br> 充滿時尚與都會感品味的人。對流行與新奇事物敏銳，能瀟灑精明地享受屬於自己的生活方式。"
     },

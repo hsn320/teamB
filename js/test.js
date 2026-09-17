@@ -160,16 +160,15 @@ const testData = {
         ],
         text: "<span class='answer-Sub-Title'>穏やかで品のあるレトロ癒やし系</span><br>柔らかい物腰とゆったりした落ち着きを持つ人。どこか懐かしく上品な雰囲気をまとい、一緒にいる人に深い安心感を与える。"
     },
-// 変更あり
     "r6" : {
         type: "result",
         title: "パンナコッタ",
         link: "https://colorstw.com/tile/pannacotta",
-        MainImage: "img/GelatoWhite.png",
+        MainImage: "img/PannaTurquoise.png",
         colors: [
-            { code: "#8cacaf", img:"img/GelatoWhite.png"},
-            { code: "#3465a7", img:"img/GelatoGray.png"},
-            { code: "#c49092", img:"img/GelatoBeige.png"},
+            { code: "#8cacaf", img:"img/PannaTurquoise.png"},
+            { code: "#3465a7", img:"img/PannaBlue.png"},
+            { code: "#c49092", img:"img/PannaPink.png"},
         ],
         text: "<span class='answer-Sub-Title'>静かでピュアな美しさを持つ、<br>洗練された人</span><br> 自分の世界を大切にし、自分を飾らない透明感のある人。静かで落ち着いた立ち振る舞いの中に、芯のある美しさと凛とした品格を秘めている。"
     },
@@ -181,7 +180,7 @@ const testData = {
         colors: [
             { code: "#AD7B74", img:"img/RengaBeige.png"},
             { code: "#CEB493", img:"img/RengaBrown.png"},
-
+            { code: "#ffffff", img:"img/RengaWhite.png"},
         ],
         text: "<span class='answer-Sub-Title'>信念を貫く、頼れる重厚リーダー</span><br> ぶれない芯の強さと責任感を持つ人。本質や価値観を大切にし、どんな時もブレずに周りを引っぱっていく確かな信頼感の持ち主。"
     },
@@ -219,7 +218,7 @@ const testData = {
             { code: "#6FA4A1", img:"img/DoughnutGreen.png"},
             { code: "#71A1B4", img:"img/DoughnutBlue.png"},
             { code: "#DDE7F4", img:"img/DoughnutIndigo.png"},
-
+            { code: "#83898B", img:"img/DoughnutGray.png"},
         ],
         text: "<span class='answer-Sub-Title'>トレンドに敏感な、センス抜群の都会派</span><br> おしゃれで都会的なセンスに溢れた人。流行やワクワクすることに敏捷で、自分のライフスタイルをスマート楽しむスタイル派。"
     },
