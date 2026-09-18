@@ -126,11 +126,6 @@ langOptions.forEach(option => {
         }
     });
 });
-// // 言語切替
-// langItem.addEventListener('click', (e) => {
-//     e.stopPropagation();
-//     langItem.classList.toggle('open');
-// });
 
 
 // スクロール
