@@ -84,6 +84,7 @@ items.forEach((item) =>
 const menuBtn = document.getElementById('menuBtn');
 const drawer = document.getElementById('drawer');
 const langItem = document.querySelector('.language-item');
+const navLinks = document.querySelectorAll('.drawer-nav-list a:not(.language-dropdown a)');
 
 // メニューの開閉状態をトグルする関数
 const toggleMenu = (force) => {
@@ -91,6 +92,13 @@ const toggleMenu = (force) => {
     drawer.classList.toggle('open', isOpen);
     menuBtn.classList.toggle('open', isOpen);
 };
+
+// ナビを押したら閉じる
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        toggleMenu(false);
+    });
+});
 
 // ハンバーガーボタンクリック
 menuBtn.addEventListener('click', () => toggleMenu());
@@ -100,11 +108,29 @@ document.addEventListener('click', (e) => {
     if (!drawer.contains(e.target) && !menuBtn.contains(e.target)) toggleMenu(false);
 });
 
-// 言語切替
+// トグルオープン
 langItem.addEventListener('click', (e) => {
     e.stopPropagation();
     langItem.classList.toggle('open');
 });
+
+// 言語切替
+const langOptions = document.querySelectorAll('.language-option');
+
+langOptions.forEach(option => {
+    option.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const targetHref = option.dataset.href;
+        if (targetHref) {
+            window.location.href = targetHref;
+        }
+    });
+});
+// // 言語切替
+// langItem.addEventListener('click', (e) => {
+//     e.stopPropagation();
+//     langItem.classList.toggle('open');
+// });
 
 
 // スクロール
