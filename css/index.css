@@ -202,10 +202,10 @@ li{
     height: 14px;
     transition: transform 0.3s;
 }
+
 .language-item.open .arrow { 
     transform: rotate(180deg); 
 }
-
 .language-dropdown {
     list-style: none;
     padding: 0;
@@ -217,7 +217,6 @@ li{
 .language-item.open .language-dropdown { 
     max-height: 200px; 
 }
-
 .language-option {
     padding: 15px 0 0;
     font-size: var(--Txt);
@@ -289,12 +288,13 @@ li{
     stroke-dashoffset: 1870; 
     shape-rendering: geometricPrecision;
 }
+
+/* 日本ver */
 .mainJa{
-    /* 日本ver */
     animation: draw 7s ease forwards;
 }
+/* 台湾ver */
 .mainTw{
-    /* 台湾ver */
     animation: draw 5s ease forwards;
 }
 @keyframes draw {
@@ -676,8 +676,6 @@ li{
         background: #F0F0F0;
         border-radius: 200px;
     }
-
-
 
     .aras1{
         position: absolute;
