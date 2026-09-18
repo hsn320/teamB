@@ -288,12 +288,14 @@ li{
     stroke-dasharray: 2000; 
     stroke-dashoffset: 1870; 
     shape-rendering: geometricPrecision;
-
+}
+.mainJa{
     /* 日本ver */
     animation: draw 7s ease forwards;
-
+}
+.mainTw{
     /* 台湾ver */
-    /* animation: draw 5s ease forwards; */
+    animation: draw 5s ease forwards;
 }
 @keyframes draw {
     to {
@@ -462,6 +464,20 @@ li{
     img {
         object-fit: cover;
     }
+    /* アニメーション設定 */
+    .flow-box.scrollIn {
+    opacity: 0;
+    }
+    .flow-box.bottomIn{
+    animation: slideIn 1s forwards;
+    animation-delay: .3s;
+    }
+    
+    /* ディレイを設定 */
+    .flow-box:nth-of-type(1).bottomIn{ animation-delay: .1s; }
+    .flow-box:nth-of-type(2).bottomIn{ animation-delay: .2s; }
+    .flow-box:nth-of-type(3).bottomIn{ animation-delay: .3s; }
+    .flow-box:nth-of-type(4).bottomIn{ animation-delay: .4s; }
 }
 .phrase{
     padding-top: 60px;
