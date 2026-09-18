@@ -25,7 +25,6 @@ const testData = {
     },
     "q3-b" : {
         number: "Q.03",
-        // 改行確認
         text: "比起熱鬧的大人群，<br>你更傾向優先選擇安靜放鬆的獨處（或少人數）<br>時光嗎？",
         nextYes: "q4-c",
         nextNo: "q4-d"
@@ -452,5 +451,5 @@ function closeConfirmModal() {
 function confirmResetQuiz() {
     document.getElementById("confirmModal").style.display = "none";
 
-    window.location.href = "index.html#tileTest";
+    window.location.href = "index_tw.html#tileTest";
 }

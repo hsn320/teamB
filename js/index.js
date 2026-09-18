@@ -103,7 +103,7 @@ navLinks.forEach(link => {
 // ハンバーガーボタンクリック
 menuBtn.addEventListener('click', () => toggleMenu());
 
-// ドロワー外クリックで閉じる
+// ドロワー外クリック閉じる
 document.addEventListener('click', (e) => {
     if (!drawer.contains(e.target) && !menuBtn.contains(e.target)) toggleMenu(false);
 });
@@ -133,7 +133,7 @@ const scrollContainer = document.getElementById('autoScrollTile');
 let scrollSpeed = 1; // スクロール速度
 let activeAnimation = true;
 
-// 自動スクロールを処理する関数
+// 自動スクロール
 const autoScrollLoop = () => {
     if (activeAnimation) {
 

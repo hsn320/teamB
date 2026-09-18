@@ -24,7 +24,7 @@
     <link rel="icon" type="image/png" href="img/favicon.png">
     <link rel="icon" href="img/favicon.ico" sizes="any">
 
-    <link rel="alternate" hreflang="ja" href="リンク">
+    <!-- <link rel="alternate" hreflang="ja" href="リンク"> -->
 
 
     <link rel="stylesheet" href="css/ress.css">
@@ -56,11 +56,11 @@
         <div id="quizScreen" style="display: none;">
 
             <div id="quiz-header">
-                <!-- 左上：戻るボタン-->
+                <!-- 左上：戻る-->
                 <span id="backBtn" class="header-icon left" onclick="goBack()" style="display: none;">
                     <img src="img/return.png" alt="戻る" width="40" height="40">
                 </span>
-                <!-- 右上：バツボタン-->
+                <!-- 右上：バツ-->
                 <span id="closeBtn" class="header-icon right" onclick="openConfirmModal()">
                     <img src="img/reset.png" alt="閉じる" width="28" height="28">
                 </span>
@@ -86,9 +86,9 @@
                 <p class="modalTitle">確定要退出測驗嗎？</p>
                 <p class="modalDesc">※目前的作答進度將不會保留</p>
                 <div class="modalButtons">
-                    <!-- いいえ モーダルを閉じる -->
+                    <!-- いいえ モーダル閉じる -->
                     <button class="modalBtn cancelBtn" onclick="closeConfirmModal()">No</button>
-                    <!-- はい スタート画面に戻る -->
+                    <!-- はい スタート画面戻る -->
                     <button class="modalBtn okBtn" onclick="confirmResetQuiz()">Yes</button>
                 </div>
             </div>
