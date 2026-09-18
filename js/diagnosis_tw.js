@@ -162,7 +162,7 @@ const testData = {
     },
     "r6" : {
         type: "result",
-        title: "パンナコッタ",
+        title: "義式奶酪",
         link: "https://colorstw.com/tile/pannacotta",
         MainImage: "img/PannaTurquoise.png",
         colors: [
