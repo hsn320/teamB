@@ -160,6 +160,7 @@ const testData = {
         ],
         text: "<span class='answer-Sub-Title'>溫和且優雅的復古療癒系</span><br>擁有溫柔優雅的舉止與令人安心的沉穩感。散發著懷舊而高雅的氣息，給人深度的安心感。"
     },
+// 変更
     "r6" : {
         type: "result",
         title: "義式奶酪",
@@ -366,10 +367,6 @@ function displayCurrentData() {
                 <p class="answerText">${currentData.text}</p>
                 <div class="ResultBtnContain">
                     <button class="resultBtn product" onclick="window.open('${currentData.link}', '_blank')">前往商品頁面</button>
-                    <button class="resultBtn share" onclick="resetQuiz()">
-                        <img src="img/share.png" class="shareIcon">
-                        分享
-                    </button>
                 </div>
             </div>
             <div class="start-header">
